@@ -1,0 +1,18 @@
+# BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
+# Ezt a fájlt 4 óránként újragenerálom és felteszem a GitHub repóba (plan.txt).
+GENERATED;2026.10.06 08:00
+VALID_UNTIL;2026.10.06 12:30
+ENABLED;1
+
+# BIAS;PÁR;long|short|none
+BIAS;EURUSD;long
+BIAS;GBPUSD;none
+BIAS;USDJPY;short
+
+# ZONE;PÁR;alsó;felső   (pároként max. 10 zóna, az EA ezek közelében keres belépőt)
+ZONE;EURUSD;1.16400;1.16550
+ZONE;EURUSD;1.16050;1.16150
+ZONE;USDJPY;149.800;150.050
+
+# BLACKOUT;kezdet;vég;DEVIZA|ALL   (hírek: az EA előtte/utána sem nyit, és zár)
+BLACKOUT;2026.10.06 14:00;2026.10.06 14:30;USD
