@@ -1,18 +1,40 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Ezt a fájlt 4 óránként újragenerálom és felteszem a GitHub repóba (plan.txt).
-GENERATED;2026.10.06 08:00
-VALID_UNTIL;2026.10.06 12:30
+# Első kézi terv, 2026-10-06, 12:00-16:00 UTC ülésre (14:00-18:00 magyar idő)
+# Adatforrás: a bróker H4/H1/D1 gyertyái (data/*.csv) + napi naptár. Csak belépési oldali zónák vannak benne:
+# short bias -> ellenállás zónák, long bias -> támasz zónák.
+GENERATED;2026.10.06 08:50
+VALID_UNTIL;2026.10.06 16:15
 ENABLED;1
 
-# BIAS;PÁR;long|short|none
-BIAS;EURUSD;long
-BIAS;GBPUSD;none
-BIAS;USDJPY;short
+# Háttér: erős dollár. D1 és H4 trend lefelé EUR, GBP, AUD, NZD ellen, felfelé CHF, CAD ellen. USDJPY vegyes + beavatkozási kockázat 158-160 körül -> none.
+# Az EA max. 2 azonos USD-irányú pozíciót enged egyszerre.
 
-# ZONE;PÁR;alsó;felső   (pároként max. 10 zóna, az EA ezek közelében keres belépőt)
-ZONE;EURUSD;1.16400;1.16550
-ZONE;EURUSD;1.16050;1.16150
-ZONE;USDJPY;149.800;150.050
+BIAS;EURUSD;short
+ZONE;EURUSD;1.12400;1.12510
+ZONE;EURUSD;1.12790;1.12880
 
-# BLACKOUT;kezdet;vég;DEVIZA|ALL   (hírek: az EA előtte/utána sem nyit, és zár)
-BLACKOUT;2026.10.06 14:00;2026.10.06 14:30;USD
+BIAS;GBPUSD;short
+ZONE;GBPUSD;1.32390;1.32510
+ZONE;GBPUSD;1.32560;1.32730
+
+BIAS;USDJPY;none
+
+BIAS;USDCHF;long
+ZONE;USDCHF;0.83020;0.83100
+ZONE;USDCHF;0.82770;0.82920
+
+BIAS;USDCAD;long
+ZONE;USDCAD;1.42370;1.42480
+ZONE;USDCAD;1.42010;1.42230
+
+BIAS;AUDUSD;short
+ZONE;AUDUSD;0.69740;0.69800
+ZONE;AUDUSD;0.69940;0.70050
+
+BIAS;NZDUSD;short
+ZONE;NZDUSD;0.56150;0.56260
+ZONE;NZDUSD;0.56370;0.56450
+
+# Hírek (az EA +-10 percet ad hozzá): Fed Williams 13:05, Fed Bowman 14:45 UTC.
+BLACKOUT;2026.10.06 13:05;2026.10.06 13:30;USD
+BLACKOUT;2026.10.06 14:45;2026.10.06 15:05;USD
