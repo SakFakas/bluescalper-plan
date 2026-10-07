@@ -1,41 +1,42 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-10-07 ülésre: 12:00-16:00 UTC (14:00-18:00 magyar idő)
-# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 05:05 UTC) + napi hírek.
+# Terv a 2026-10-07 ülésre: 12:00-16:00 UTC (14:00-18:00 magyar idő) - 10:00 UTC körüli frissítés
+# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 09:05 UTC, friss) + napi hírek.
 # Csak belépési oldali zónák: short bias -> ellenállás, long bias -> támasz.
-GENERATED;2026.10.07 06:20
+GENERATED;2026.10.07 10:03
 VALID_UNTIL;2026.10.07 16:15
 ENABLED;1
 
-# Háttér: a D1 és H4 trend változatlanul dollárerős (EUR, GBP, AUD, NZD lefelé; CHF, CAD felfelé).
-# Tegnap a dollár visszaesett (EURUSD 1.1277, GBPUSD 1.3285, AUDUSD 0.6990 csúcs), éjszaka újra erősödött.
-# FOMC jegyzőkönyv 18:00 UTC-kor (az ülésen kívül). USDJPY: vegyes trend, beavatkozási kockázat -> none.
+# Háttér: a D1/H4 trend dollárerős (DXY 102 felett, EUR és GBP többhavi mélyponton; EURUSD ma 1.1180 mélypont).
+# Reggel az ár tovább esett az előző tervhez képest, a zónák a mai árhoz (EURUSD 1.1202, GBPUSD 1.3244) igazítva, visszahúzódásra (ellenállás/támasz teszt).
+# FOMC jegyzőkönyv 18:00 UTC-kor (az ülésen kívül); Logan és Williams (Fed) felszólal, pontos idő nem ismert (jellemzően sólyos hang, USD-erősítő).
+# USDJPY: 158 körül beavatkozási kockázat -> none.
 # Mind a 6 irány ugyanarra a dollárirányra fogad (USD long), az EA max. 2-t enged egyszerre.
 
 BIAS;EURUSD;short
-ZONE;EURUSD;1.12500;1.12640
-ZONE;EURUSD;1.12760;1.12870
+ZONE;EURUSD;1.12130;1.12230
+ZONE;EURUSD;1.12400;1.12500
 
 BIAS;GBPUSD;short
-ZONE;GBPUSD;1.32540;1.32640
-ZONE;GBPUSD;1.32700;1.32860
+ZONE;GBPUSD;1.32600;1.32700
+ZONE;GBPUSD;1.32850;1.32950
 
 BIAS;USDJPY;none
 
 BIAS;USDCHF;long
-ZONE;USDCHF;0.83190;0.83265
-ZONE;USDCHF;0.83040;0.83110
+ZONE;USDCHF;0.83150;0.83230
+ZONE;USDCHF;0.82980;0.83060
 
 BIAS;USDCAD;long
-ZONE;USDCAD;1.42010;1.42110
-ZONE;USDCAD;1.41500;1.41560
+ZONE;USDCAD;1.41950;1.42040
+ZONE;USDCAD;1.41820;1.41900
 
 BIAS;AUDUSD;short
-ZONE;AUDUSD;0.69790;0.69900
-ZONE;AUDUSD;0.70000;0.70050
+ZONE;AUDUSD;0.69850;0.69910
+ZONE;AUDUSD;0.69950;0.70000
 
 BIAS;NZDUSD;short
-ZONE;NZDUSD;0.56200;0.56290
-ZONE;NZDUSD;0.56360;0.56450
+ZONE;NZDUSD;0.56200;0.56280
+ZONE;NZDUSD;0.56370;0.56430
 
 # Hírek: EIA nyersolaj-készlet 14:30 UTC (CAD, az EA +-10 percet ad hozzá).
 BLACKOUT;2026.10.07 14:30;2026.10.07 14:40;CAD
