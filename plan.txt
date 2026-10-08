@@ -1,42 +1,43 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-10-07 ülésre: 12:00-16:00 UTC (14:00-18:00 magyar idő) - 10:00 UTC körüli frissítés
-# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 09:05 UTC, friss) + napi hírek.
+# Terv a 2026-10-08 ülésre: 12:00-16:00 UTC (14:00-18:00 magyar idő) - 06:00 UTC körüli terv
+# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 05:05 UTC, ~1 óra, friss) + napi hírek.
 # Csak belépési oldali zónák: short bias -> ellenállás, long bias -> támasz.
-GENERATED;2026.10.07 10:03
-VALID_UNTIL;2026.10.07 16:15
+GENERATED;2026.10.08 06:01
+VALID_UNTIL;2026.10.08 16:15
 ENABLED;1
 
-# Háttér: a D1/H4 trend dollárerős (DXY 102 felett, EUR és GBP többhavi mélyponton; EURUSD ma 1.1180 mélypont).
-# Reggel az ár tovább esett az előző tervhez képest, a zónák a mai árhoz (EURUSD 1.1202, GBPUSD 1.3244) igazítva, visszahúzódásra (ellenállás/támasz teszt).
-# FOMC jegyzőkönyv 18:00 UTC-kor (az ülésen kívül); Logan és Williams (Fed) felszólal, pontos idő nem ismert (jellemzően sólyos hang, USD-erősítő).
-# USDJPY: 158 körül beavatkozási kockázat -> none.
-# Mind a 6 irány ugyanarra a dollárirányra fogad (USD long), az EA max. 2-t enged egyszerre.
+# Háttér: a D1/H4 trend dollárerős (EURUSD 1.1206, GBPUSD 1.3209 az SMA10/20/50 alatt, USDCAD 1.4262 és USDCHF 0.8328 felfelé; Fed szeptemberi emelés, a tegnapi jegyzőkönyv inflációs kockázatot hangsúlyozott).
+# Tegnap az ár az ellenállásokból (EURUSD ~1.1259, GBPUSD ~1.3276) visszaesett -> visszahúzódásra (pivot/R1, korábbi csúcsok) keresünk belépőt; napi ATR: EURUSD ~64, GBPUSD ~71, USDCAD ~55 pip.
+# Szintek: napi pivot (P/R1/S1 a tegnapi D1-ből), tegnapi és 6-i csúcsok/mélypontok.
+# Hírek az ülésen: US heti munkanélküli-segély 12:30 UTC (USD). ECB-jegyzőkönyv 11:30 UTC (ülés előtt, nincs blackout). Musalem (Fed) 17:40 UTC (ülés után). BoE Bailey/Greene/Lombardelli ma beszél, pontos idő nem ismert (GBP-kockázat).
+# USDJPY: ~158.2, intervenciós kockázat (korábbi közös amerikai-japán beavatkozás) -> none.
+# Mind a 6 USD-s irány ugyanarra a dollárirányra fogad (USD long), az EA max. 2-t enged egyszerre.
 
 BIAS;EURUSD;short
-ZONE;EURUSD;1.12130;1.12230
-ZONE;EURUSD;1.12400;1.12500
+ZONE;EURUSD;1.12250;1.12350
+ZONE;EURUSD;1.12500;1.12650
 
 BIAS;GBPUSD;short
-ZONE;GBPUSD;1.32600;1.32700
-ZONE;GBPUSD;1.32850;1.32950
+ZONE;GBPUSD;1.32250;1.32340
+ZONE;GBPUSD;1.32580;1.32700
 
 BIAS;USDJPY;none
 
 BIAS;USDCHF;long
-ZONE;USDCHF;0.83150;0.83230
-ZONE;USDCHF;0.82980;0.83060
+ZONE;USDCHF;0.83120;0.83200
+ZONE;USDCHF;0.82950;0.83040
 
 BIAS;USDCAD;long
-ZONE;USDCAD;1.41950;1.42040
-ZONE;USDCAD;1.41820;1.41900
+ZONE;USDCAD;1.42400;1.42480
+ZONE;USDCAD;1.42130;1.42210
 
 BIAS;AUDUSD;short
-ZONE;AUDUSD;0.69850;0.69910
-ZONE;AUDUSD;0.69950;0.70000
+ZONE;AUDUSD;0.69640;0.69720
+ZONE;AUDUSD;0.69800;0.69900
 
 BIAS;NZDUSD;short
-ZONE;NZDUSD;0.56200;0.56280
-ZONE;NZDUSD;0.56370;0.56430
+ZONE;NZDUSD;0.56130;0.56200
+ZONE;NZDUSD;0.56250;0.56330
 
-# Hírek: EIA nyersolaj-készlet 14:30 UTC (CAD, az EA +-10 percet ad hozzá).
-BLACKOUT;2026.10.07 14:30;2026.10.07 14:40;CAD
+# Hírek: US heti munkanélküli-segély 12:30 UTC (az EA +-10 percet ad hozzá).
+BLACKOUT;2026.10.08 12:30;2026.10.08 12:40;USD
