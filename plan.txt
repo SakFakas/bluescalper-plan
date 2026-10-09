@@ -1,45 +1,44 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-10-09 (péntek) ülésre: 12:00-16:00 UTC (14:00-18:00 magyar idő) - 06:00 UTC körüli első terv
-# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 05:22 UTC, ~38 perces, friss; az utolsó M15 gyertya 05:00 UTC) + napi hírek.
+# Terv a 2026-10-09 (péntek) ülésre: 12:00-16:00 UTC (14:00-18:00 magyar idő) - 10:00 UTC körüli frissítés a 06:00-s tervhez
+# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 09:22 UTC, ~40 perces, friss; bróker-szerver idő = UTC+3, a META server_minus_utc_sec szerint) + napi hírek.
 # Csak belépési oldali zónák: short bias -> ellenállás, long bias -> támasz.
 # PÉNTEK: 15:00 UTC után az EA nem nyit új trade-et, ezért a zónák az ülés 12:00-15:00 szakaszára szólnak.
-GENERATED;2026.10.09 06:00
+GENERATED;2026.10.09 10:00
 VALID_UNTIL;2026.10.09 16:15
 ENABLED;1
 
-# Háttér: a D1 trend dollárerős: EURUSD 1.1232, GBPUSD 1.3244, AUDUSD 0.6982, NZDUSD 0.5622 az SMA20/50 alatt; USDCHF 0.8302 és USDCAD 1.4210 az SMA20/50 felett. A Fed 25 bp-ot emelt szeptemberben (a jegyzőkönyv szerint egyhangúan), decemberre újabb emelés van beárazva -> USD támogatott.
-# Éjszaka az USD-s párok kis visszapattanást mutattak a tegnapi zárástól, ezért a visszapattanás felső szintjeire (R1, tegnapi/korábbi csúcs, 5 napi csúcs) keresünk short, USDCHF/USDCAD esetén támaszokra (S1, 5 napi mélypont) long belépőt.
+# Háttér: a D1 trend dollárerős: EURUSD 1.1221, GBPUSD 1.3238, AUDUSD 0.6977, NZDUSD 0.5609 az SMA20/50 alatt; USDCHF 0.8313 és USDCAD 1.4225 az SMA20/50 felett. A hét során az USD-s párok szűk sávban mozogtak a hét eleji mélypontok felett/alatt; a reggeli visszapattanás szintjeire (mai H4 csúcs, R1/R2, 5 napi csúcs) short, USDCHF/USDCAD esetén támaszokra (mai mélypont, S1/S2) long belépőt keresünk.
 # Napi ATR14: EURUSD ~66, GBPUSD ~71, AUDUSD ~47, NZDUSD ~42, USDCAD ~56, USDCHF ~51 pip; minden zóna az utolsó bid-hez képest <= ~1 ATR-en belül.
-# Szintek: napi pivot R1/S1 a tegnapi (2026.10.08) D1-ből, tegnapi és 10.07-i csúcs/mélypont, 5 napi csúcs/mélypont.
-# Hírek (UTC): Kanada foglalkoztatás+munkanélküliség 12:30 (CAD), Schmid (KC Fed) ~13:30 (USD, pontos idő nem megerősített), Michigan fogyasztói bizalom előzetes 14:00 (USD). Más nagy esemény az ülésen nem szerepelt a forrásokban (EUR/GBP/AUD/NZD: nincs ismert esemény; a naptárforrások hiányosak lehetnek).
-# USDJPY: ~158.07, intervenciós kockázat -> none.
+# Szintek: napi pivot R1/R2/S1/S2 a tegnapi (2026.10.08) D1-ből, mai és korábbi napi csúcsok/mélypontok, 5 napi csúcs/mélypont.
+# Hírek (UTC): Kanada foglalkoztatás+munkanélküliség (várakozás +9K, 6.5%) 12:30 (CAD), Michigan fogyasztói bizalom és inflációs várakozás előzetes 14:00 (USD, idő a szokásos menetrend szerint). Schmid (KC Fed) ~13:30 az előző terv szerint, nem megerősített, óvatosságból marad. Más nagy esemény az ülésen nem szerepelt a forrásokban (a naptárforrások hiányosak lehetnek, az időpontok nem mind megerősítettek).
+# USDJPY: ~158.19, intervenciós kockázat -> none.
 # Mind a 6 USD-s irány ugyanarra a dollárirányra fogad (USD long), az EA max. 2-t enged egyszerre.
 
 BIAS;EURUSD;short
-ZONE;EURUSD;1.12340;1.12420
-ZONE;EURUSD;1.12600;1.12680
+ZONE;EURUSD;1.12390;1.12470
+ZONE;EURUSD;1.12570;1.12650
 
 BIAS;GBPUSD;short
-ZONE;GBPUSD;1.32500;1.32590
-ZONE;GBPUSD;1.32740;1.32830
+ZONE;GBPUSD;1.32490;1.32580
+ZONE;GBPUSD;1.32740;1.32850
 
 BIAS;USDJPY;none
 
 BIAS;USDCHF;long
-ZONE;USDCHF;0.82960;0.83020
-ZONE;USDCHF;0.82800;0.82880
+ZONE;USDCHF;0.82960;0.83040
+ZONE;USDCHF;0.82780;0.82850
 
 BIAS;USDCAD;long
-ZONE;USDCAD;1.41950;1.42030
-ZONE;USDCAD;1.41750;1.41840
+ZONE;USDCAD;1.42000;1.42080
+ZONE;USDCAD;1.41780;1.41860
 
 BIAS;AUDUSD;short
-ZONE;AUDUSD;0.69880;0.69960
-ZONE;AUDUSD;0.70100;0.70180
+ZONE;AUDUSD;0.69870;0.69950
+ZONE;AUDUSD;0.70040;0.70120
 
 BIAS;NZDUSD;short
-ZONE;NZDUSD;0.56260;0.56340
-ZONE;NZDUSD;0.56420;0.56500
+ZONE;NZDUSD;0.56230;0.56300
+ZONE;NZDUSD;0.56400;0.56470
 
 # Hírek (az EA +-10 percet ad hozzá): Kanada munkaerőpiac, Schmid, Michigan előzetes.
 BLACKOUT;2026.10.09 12:30;2026.10.09 12:40;CAD
