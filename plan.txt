@@ -1,46 +1,39 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-10-09 (péntek) ülésre: 12:00-16:00 UTC (14:00-18:00 magyar idő) - 10:00 UTC körüli frissítés a 06:00-s tervhez
-# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 09:22 UTC, ~40 perces, friss; bróker-szerver idő = UTC+3, a META server_minus_utc_sec szerint) + napi hírek.
+# Terv a 2026-10-12 (hétfő) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő) - 06:00 UTC körüli futás, elsősorban a London ülésre, de mindkét ülésre érvényes zónákkal.
+# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 05:07 UTC, ~55 perces, friss; bróker-szerver idő = UTC+3, a META server_minus_utc_sec szerint ~10799) + napi hírek. Az utolsó M15 gyertya 04:45 UTC (szerver 07:45).
 # Csak belépési oldali zónák: short bias -> ellenállás, long bias -> támasz.
-# PÉNTEK: 15:00 UTC után az EA nem nyit új trade-et, ezért a zónák az ülés 12:00-15:00 szakaszára szólnak.
-GENERATED;2026.10.09 10:00
-VALID_UNTIL;2026.10.09 16:15
-ENABLED;1
-
-# Háttér: a D1 trend dollárerős: EURUSD 1.1221, GBPUSD 1.3238, AUDUSD 0.6977, NZDUSD 0.5609 az SMA20/50 alatt; USDCHF 0.8313 és USDCAD 1.4225 az SMA20/50 felett. A hét során az USD-s párok szűk sávban mozogtak a hét eleji mélypontok felett/alatt; a reggeli visszapattanás szintjeire (mai H4 csúcs, R1/R2, 5 napi csúcs) short, USDCHF/USDCAD esetén támaszokra (mai mélypont, S1/S2) long belépőt keresünk.
-# Napi ATR14: EURUSD ~66, GBPUSD ~71, AUDUSD ~47, NZDUSD ~42, USDCAD ~56, USDCHF ~51 pip; minden zóna az utolsó bid-hez képest <= ~1 ATR-en belül.
-# Szintek: napi pivot R1/R2/S1/S2 a tegnapi (2026.10.08) D1-ből, mai és korábbi napi csúcsok/mélypontok, 5 napi csúcs/mélypont.
-# Hírek (UTC): Kanada foglalkoztatás+munkanélküliség (várakozás +9K, 6.5%) 12:30 (CAD), Michigan fogyasztói bizalom és inflációs várakozás előzetes 14:00 (USD, idő a szokásos menetrend szerint). Schmid (KC Fed) ~13:30 az előző terv szerint, nem megerősített, óvatosságból marad. Más nagy esemény az ülésen nem szerepelt a forrásokban (a naptárforrások hiányosak lehetnek, az időpontok nem mind megerősítettek).
-# USDJPY: ~158.19, intervenciós kockázat -> none.
+# Háttér: a D1 trend dollárerős: EURUSD 1.1205, GBPUSD 1.3240, AUDUSD 0.6977, NZDUSD 0.5605 az SMA20/50 alatt; USDCHF 0.8305 és USDCAD 1.4259 az SMA20/50 felett. Az Ázsia szakasz szűk sávú volt (pl. EURUSD 1.1187-1.1217, GBPUSD 1.3220-1.3253), a zónák a mai Ázsia-csúcsok, a pénteki csúcsok, R1/R2 pivotok (short) és a mai mélypont, pénteki mélypont, S1/S2 (long) körül vannak.
+# Napi ATR14: EURUSD ~67, GBPUSD ~71, AUDUSD ~47, NZDUSD ~43, USDCAD ~59, USDCHF ~50, USDJPY ~104 pip; minden zóna az utolsó bid-hez képest <= ~1 ATR-en belül.
+# Hírek (UTC): hétfőn nincs megerősített időzített nagy hatású adat. USA: Columbus Day (az amerikai kötvénypiac zárva, vékonyabb NY likviditás); Kanada: hálaadás (CAD vékony piac). Beszélők időpont nélkül a forrásokban: BoE Breeden és Mann, Fed Hammack - időpont hiányában nincs blackout, a 10:00-s futás frissíti. A hét későbbi eseményei: kedd Fed Waller/Collins, szerda USA CPI (14.), csütörtök PPI/kiskereskedelem.
+# USDJPY: ~158.34, intervenciós kockázat -> none.
 # Mind a 6 USD-s irány ugyanarra a dollárirányra fogad (USD long), az EA max. 2-t enged egyszerre.
 
+GENERATED;2026.10.12 06:05
+VALID_UNTIL;2026.10.12 16:15
+ENABLED;1
+
 BIAS;EURUSD;short
-ZONE;EURUSD;1.12390;1.12470
-ZONE;EURUSD;1.12570;1.12650
+ZONE;EURUSD;1.12150;1.12220
+ZONE;EURUSD;1.12310;1.12380
 
 BIAS;GBPUSD;short
-ZONE;GBPUSD;1.32490;1.32580
-ZONE;GBPUSD;1.32740;1.32850
+ZONE;GBPUSD;1.32500;1.32570
+ZONE;GBPUSD;1.32720;1.32790
 
 BIAS;USDJPY;none
 
 BIAS;USDCHF;long
-ZONE;USDCHF;0.82960;0.83040
+ZONE;USDCHF;0.82880;0.82950
 ZONE;USDCHF;0.82780;0.82850
 
 BIAS;USDCAD;long
-ZONE;USDCAD;1.42000;1.42080
-ZONE;USDCAD;1.41780;1.41860
+ZONE;USDCAD;1.42450;1.42530
+ZONE;USDCAD;1.42050;1.42120
 
 BIAS;AUDUSD;short
-ZONE;AUDUSD;0.69870;0.69950
-ZONE;AUDUSD;0.70040;0.70120
+ZONE;AUDUSD;0.69880;0.69960
+ZONE;AUDUSD;0.69990;0.70070
 
 BIAS;NZDUSD;short
-ZONE;NZDUSD;0.56230;0.56300
-ZONE;NZDUSD;0.56400;0.56470
-
-# Hírek (az EA +-10 percet ad hozzá): Kanada munkaerőpiac, Schmid, Michigan előzetes.
-BLACKOUT;2026.10.09 12:30;2026.10.09 12:40;CAD
-BLACKOUT;2026.10.09 13:30;2026.10.09 13:35;USD
-BLACKOUT;2026.10.09 14:00;2026.10.09 14:10;USD
+ZONE;NZDUSD;0.56170;0.56240
+ZONE;NZDUSD;0.56260;0.56330
