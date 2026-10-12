@@ -1,39 +1,39 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-10-12 (hétfő) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő) - 06:00 UTC körüli futás, elsősorban a London ülésre, de mindkét ülésre érvényes zónákkal.
-# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 05:07 UTC, ~55 perces, friss; bróker-szerver idő = UTC+3, a META server_minus_utc_sec szerint ~10799) + napi hírek. Az utolsó M15 gyertya 04:45 UTC (szerver 07:45).
+# Terv a 2026-10-12 (hétfő) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő) - 10:00 UTC körüli frissítés: a London vége előtt és a NY ülésre, a teljes fájl újraírva.
+# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 09:07 UTC, ~53 perces, friss; bróker-szerver idő = UTC+3, a META server_minus_utc_sec szerint ~10782). Az utolsó lezárt H1 gyertya 08:00 UTC (szerver 11:00).
 # Csak belépési oldali zónák: short bias -> ellenállás, long bias -> támasz.
-# Háttér: a D1 trend dollárerős: EURUSD 1.1205, GBPUSD 1.3240, AUDUSD 0.6977, NZDUSD 0.5605 az SMA20/50 alatt; USDCHF 0.8305 és USDCAD 1.4259 az SMA20/50 felett. Az Ázsia szakasz szűk sávú volt (pl. EURUSD 1.1187-1.1217, GBPUSD 1.3220-1.3253), a zónák a mai Ázsia-csúcsok, a pénteki csúcsok, R1/R2 pivotok (short) és a mai mélypont, pénteki mélypont, S1/S2 (long) körül vannak.
+# Háttér: a D1 trend dollárerős: EURUSD 1.1194, GBPUSD 1.3237, AUDUSD 0.6970, NZDUSD 0.5599 az SMA20/50 alatt; USDCHF 0.8323 és USDCAD 1.4261 az SMA20/50 felett. A mai London nyitás óta a dollár tovább erősödött (az EURUSD 1.1205-ről 1.1194-re, az USDCHF 0.8305-ről 0.8323-ra). A zónák a mai csúcsok/mélypontok (1.1217 EURUSD, 1.3261 GBPUSD, 0.6995 AUDUSD, 0.5619 NZDUSD; 0.8293 USDCHF, 1.4240 USDCAD), a pénteki pivotok és R1/S1 szintek körül vannak.
 # Napi ATR14: EURUSD ~67, GBPUSD ~71, AUDUSD ~47, NZDUSD ~43, USDCAD ~59, USDCHF ~50, USDJPY ~104 pip; minden zóna az utolsó bid-hez képest <= ~1 ATR-en belül.
-# Hírek (UTC): hétfőn nincs megerősített időzített nagy hatású adat. USA: Columbus Day (az amerikai kötvénypiac zárva, vékonyabb NY likviditás); Kanada: hálaadás (CAD vékony piac). Beszélők időpont nélkül a forrásokban: BoE Breeden és Mann, Fed Hammack - időpont hiányában nincs blackout, a 10:00-s futás frissíti. A hét későbbi eseményei: kedd Fed Waller/Collins, szerda USA CPI (14.), csütörtök PPI/kiskereskedelem.
-# USDJPY: ~158.34, intervenciós kockázat -> none.
+# Hírek (UTC): hétfőn nincs megerősített időzített nagy hatású adat vagy központi banki döntés az ülések idején (Fed-naptár: hétfőn nincs beszéd; kedden Waller 03:45 Ázsia/Delhi, szerdán Bowman - mind ülésen kívül). USA: Columbus Day (az amerikai kötvénypiac zárva, vékonyabb NY likviditás); Kanada: hálaadás (CAD vékony piac). Időpont nélküli BoE-beszélők miatt nincs blackout. A hét későbbi eseménye: szerda USA CPI (14.) - akkor blackout.
+# USDJPY: ~158.44, intervenciós kockázat (158+ szint) -> none.
 # Mind a 6 USD-s irány ugyanarra a dollárirányra fogad (USD long), az EA max. 2-t enged egyszerre.
 
-GENERATED;2026.10.12 06:05
+GENERATED;2026.10.12 10:03
 VALID_UNTIL;2026.10.12 16:15
 ENABLED;1
 
 BIAS;EURUSD;short
-ZONE;EURUSD;1.12150;1.12220
-ZONE;EURUSD;1.12310;1.12380
+ZONE;EURUSD;1.12000;1.12070
+ZONE;EURUSD;1.12140;1.12210
 
 BIAS;GBPUSD;short
 ZONE;GBPUSD;1.32500;1.32570
-ZONE;GBPUSD;1.32720;1.32790
+ZONE;GBPUSD;1.32580;1.32650
 
 BIAS;USDJPY;none
 
 BIAS;USDCHF;long
-ZONE;USDCHF;0.82880;0.82950
-ZONE;USDCHF;0.82780;0.82850
+ZONE;USDCHF;0.83050;0.83120
+ZONE;USDCHF;0.82930;0.83000
 
 BIAS;USDCAD;long
-ZONE;USDCAD;1.42450;1.42530
-ZONE;USDCAD;1.42050;1.42120
+ZONE;USDCAD;1.42400;1.42470
+ZONE;USDCAD;1.42180;1.42250
 
 BIAS;AUDUSD;short
-ZONE;AUDUSD;0.69880;0.69960
-ZONE;AUDUSD;0.69990;0.70070
+ZONE;AUDUSD;0.69800;0.69870
+ZONE;AUDUSD;0.69920;0.69990
 
 BIAS;NZDUSD;short
-ZONE;NZDUSD;0.56170;0.56240
-ZONE;NZDUSD;0.56260;0.56330
+ZONE;NZDUSD;0.56100;0.56170
+ZONE;NZDUSD;0.56180;0.56250
