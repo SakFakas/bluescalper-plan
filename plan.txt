@@ -1,42 +1,42 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-10-14 (szerda) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő) - 06:00 körüli (05:59 UTC) napi terv, elsősorban a London ülésre, de mindkét ülésre érvényes zónákkal; a teljes fájl újraírva.
-# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 05:07 UTC, ~53 perces, friss; bróker-szerver idő = UTC+3, a META server_minus_utc_sec szerint ~10775). Utolsó lezárt M15 gyertya 04:45 UTC nyitású.
+# Terv a 2026-10-14 (szerda) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő) - 10:00 körüli (09:59 UTC) frissítés a London vége előtt és a NY ülésre; a teljes fájl újraírva.
+# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 09:07 UTC, ~53 perces, friss; bróker-szerver idő = UTC+3, a META server_minus_utc_sec szerint ~10773).
 # Csak belépési oldali zónák: short bias -> ellenállás, long bias -> támasz.
-# Háttér: a D1 trend dollárerős (EURUSD 1.12067, AUDUSD 0.70016, NZDUSD 0.56256 az SMA20/50 alatt; GBPUSD 1.32728 az SMA50 alatt, de az SMA20 fölé pattant -> gyengébb meggyőződés; USDCHF 0.83182 és USDCAD 1.41977 az SMA20/50 felett). Ázsiában a dollár gyengült (CAD és AUD mozgott a legtöbbet: USDCAD a tegnapi mélypont 1.42034 alá, AUDUSD 0.70 fölé), ezért a short zónák a mai Ázsia csúcsok és a közeli H4 swing csúcsok fölött (EURUSD 1.12129/1.12170/1.12267, GBPUSD 1.32800/1.32854/1.33111, AUDUSD SMA20 0.7013 és 0.70392, NZDUSD 0.56265-0.56374), a long zónák H4 swing mélypontoknál (USDCHF 0.83131/0.82979, USDCAD 1.41752/1.41544).
+# Háttér: a D1 trend dollárerős (EURUSD 1.11953, GBPUSD 1.32614, AUDUSD 0.70085, NZDUSD 0.56177 az SMA50 alatt; USDCHF 0.83355 és USDCAD 1.42145 az SMA20/50 felett). A reggeli Ázsia-szakasz dollárgyengülését London alatt visszavette az USD (EURUSD 1.12114 -> 1.11953, USDCHF 0.83169 -> 0.83355), így a bias változatlan D1-követő.
+# Zónák: short = mai Ázsia csúcsok/H1 csúcsok és SMA20 (EURUSD 1.12114, GBPUSD 1.32751, AUDUSD 0.70117/SMA20 0.7013, NZDUSD 0.56296), második zóna a közeli H4/D1 swing csúcsoknál; long = a mai London H1 mélypontok (USDCHF 0.83202/0.83278) és az Ázsia/D1 mélypontok (USDCAD 1.41967/1.42034, USDCHF 0.83131).
 # Napi ATR14: EURUSD ~66, GBPUSD ~66, AUDUSD ~44, NZDUSD ~39, USDCAD ~60, USDCHF ~50, USDJPY ~100 pip; minden zóna az utolsó bid-hez képest <= ~1 ATR-en belül.
-# Hírek (UTC): 05:30 Bailey (BoE) és 06:05 Macklem (BoC) - ülésen kívül, nincs blackout. 08:30 Lagarde (ECB) beszéd a London ülésen belül -> BLACKOUT EUR 08:15-09:00. 12:30 USA szeptemberi CPI (várt főszám +0.6% m/m, 3.6% y/y; mag +0.2% m/m, 2.5% y/y) a NY ülés elején -> BLACKOUT USD 12:00-13:15. 18:00 Beige Book (ülésen kívül). Holnap 06:00 UK GDP, 12:30 USA PPI + kiskereskedelem.
-# USDJPY: ~158.15, a hétfői csúcs 158.75, intervenciós kockázat (158+ szint) -> none.
-# Mind a 6 USD-s irány ugyanarra a dollárirányra fogad (USD long: USDCHF/USDCAD long, EUR/GBP/AUD/NZD short), az EA max. 2-t enged egyszerre. Figyelem: a mai Ázsia-szakaszban a dollár gyengült, a bias a D1 trendet követi, a belépés ellenállásnál/támasznál történik; a CPI előtt a likviditás vékonyabb lehet.
+# Hírek (UTC): 08:30 Lagarde (ECB) már lezajlott, az EUR blackout lejárt. 12:30 USA szeptemberi CPI (várt főszám +0.6% m/m, 3.6% y/y; mag +0.2% m/m, 2.5% y/y) a NY ülés elején -> BLACKOUT USD 12:00-13:15 (az EA ±10 percet ad hozzá, nagy volatilitás várható). Holnap 00:30 AUS munkaerőpiac, 06:00 UK GDP, 12:30 USA PPI + kiskereskedelem.
+# USDJPY: ~158.45, a hétfői csúcs 158.75, intervenciós kockázat (158+ szint) -> none.
+# Mind a 6 USD-s irány ugyanarra a dollárirányra fogad (USD long: USDCHF/USDCAD long, EUR/GBP/AUD/NZD short), az EA max. 2-t enged egyszerre. Figyelem: a CPI (hő várakozás +0.6% m/m) előtt a likviditás vékony, a CPI után a trend megfordulhat; a blackout után a zónák újra érvényesek.
 
-GENERATED;2026.10.14 06:01
+GENERATED;2026.10.14 10:00
 VALID_UNTIL;2026.10.14 16:15
 ENABLED;1
 
-BLACKOUT;2026.10.14 08:15;2026.10.14 09:00;EUR
 BLACKOUT;2026.10.14 12:00;2026.10.14 13:15;USD
 
 BIAS;EURUSD;short
-ZONE;EURUSD;1.12120;1.12180
-ZONE;EURUSD;1.12260;1.12330
+ZONE;EURUSD;1.12090;1.12150
+ZONE;EURUSD;1.12250;1.12330
 
 BIAS;GBPUSD;short
-ZONE;GBPUSD;1.32800;1.32870
+ZONE;GBPUSD;1.32720;1.32790
 ZONE;GBPUSD;1.33050;1.33120
 
 BIAS;USDJPY;none
 
 BIAS;USDCHF;long
+ZONE;USDCHF;0.83200;0.83270
 ZONE;USDCHF;0.83100;0.83160
-ZONE;USDCHF;0.82960;0.83010
 
 BIAS;USDCAD;long
+ZONE;USDCAD;1.41960;1.42040
 ZONE;USDCAD;1.41700;1.41780
-ZONE;USDCAD;1.41520;1.41600
 
 BIAS;AUDUSD;short
-ZONE;AUDUSD;0.70110;0.70180
+ZONE;AUDUSD;0.70150;0.70220
 ZONE;AUDUSD;0.70370;0.70450
 
 BIAS;NZDUSD;short
-ZONE;NZDUSD;0.56260;0.56320
-ZONE;NZDUSD;0.56370;0.56440
+ZONE;NZDUSD;0.56280;0.56340
+ZONE;NZDUSD;0.56380;0.56450
