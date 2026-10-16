@@ -1,42 +1,18 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-10-15 (csütörtök) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő) - 10:00 körüli (09:59 UTC) frissítés a London vége előtt és a NY ülésre; a teljes fájl újraírva. A téli idő (London 08-12, NY 13-17) október 25-től érvényes, ez a terv még nyári.
-# Adatforrás: a bróker D1/H4/H1/M15 gyertyái (data/*.csv, export 09:07 UTC, ~52 perces, friss; bróker-szerver idő = UTC+3, a META server_minus_utc_sec szerint 10769-10770).
-# Csak belépési oldali zónák: short bias -> ellenállás, long bias -> támasz.
-# Háttér: a D1 trend dollárerős (EURUSD 1.12184, AUDUSD 0.69276, NZDUSD 0.56098 az SMA20/50 alatt; GBPUSD 1.32611 az SMA20 1.32585 körül, SMA50 alatt; USDCHF 0.82915 az SMA20 körül, SMA50 felett; USDCAD 1.41977 az SMA20/50 felett). Az ázsiai/korai London szakaszban az USD korrekcióban volt, de a bid-ek visszahúzódtak a mai csúcsoktól: a terv a trend folytatására épít (eladás a mai csúcsoknál/ellenállásnál, USDCHF/USDCAD vétel a mai mélypontoknál).
-# Zónák: short = mai csúcsok és tegnapi csúcs (EURUSD 1.12410, GBPUSD 1.32679 mai / 1.32751 tegnapi, AUDUSD 0.69800, NZDUSD 0.56345); long = mai mélypontok (USDCHF 0.82778, USDCAD 1.41945), második zóna lejjebb (USDCAD D1 SMA20 1.41733, USDCHF 0.82700).
-# Napi ATR14: EURUSD ~70, GBPUSD ~72, AUDUSD ~45, NZDUSD ~41, USDCAD ~63, USDCHF ~50, USDJPY ~98 pip; minden zóna az utolsó bid-hez képest <= ~1 ATR-en belül.
-# Hírek (UTC): a 06:00 UK GDP és az ázsiai adatok lezajlottak. 12:30 USA PPI (várt főszám +0.5% m/m), kiskereskedelem (várt +0.3%, mag +0.5%), Philly Fed és heti munkanélküli segély a NY ülés elején -> BLACKOUT USD 12:00-13:15 (az EA ±10 percet ad hozzá). Jegybanki beszéd az ülések idején nincs; okt. 16. 02:00 Bailey és 03:30 Warsh már ülésen kívül van. A napi naptár forrása nem teljesen egyértelmű az időzónát illetően, ezért a blackout a megszokott 12:30 UTC US-adatidőre épül.
-# USDJPY: ~157.8, a tegnapi csúcs 158.95, intervenciós kockázat és nincs tiszta irány -> none.
-# Mind a 6 USD-s irány ugyanarra a dollárirányra fogad (USD long: USDCHF/USDCAD long, EUR/GBP/AUD/NZD short), az EA max. 2-t enged egyszerre. Figyelem: a PPI/kiskereskedelem után a trend megfordulhat; a blackout után a zónák újra érvényesek.
+# Terv a 2026-10-16 (péntek) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő); pénteken 15:00 UTC után az EA nem nyit új trade-et. A téli idő (London 08-12, NY 13-17) október 25-től érvényes. 05:59 UTC körüli futás, a teljes fájl újraírva.
+# FIGYELEM - ELAVULT ADAT: a data/*.csv mind a 7 párnál META utc=2026.10.15 12:06, vagyis a generáláskor ~18 órás (az EA óránkénti exportja nem frissült az éjszaka folyamán; az utolsó repo-commit 'data 2026.10.15 12:06'). Hiányzik a csütörtöki NY-zárás, az ázsiai szakasz és a mai London előtti mozgás, ezért a zónák nem igazíthatók a jelenlegi árfolyamhoz (utolsó ismert bid: EURUSD 1.12088, GBPUSD 1.32460, USDJPY 157.968, USDCHF 0.83016, USDCAD 1.42038, AUDUSD 0.69110, NZDUSD 0.56001).
+# Döntés: ENABLED;0 és mind a 7 párra none - elavult árakra épített zónák kockázatosak lennének. A 09:59 UTC körüli futás frissítheti a tervet, ha addigra friss export érkezik (ellenőrizendő: az EA export / VPS / MT5 kapcsolat).
+# Hírek: a mai (péntek) naptárat nem sikerült megbízhatóan ellenőrizni, ezért BLACKOUT nincs külön felvéve; ENABLED;0 mellett az EA úgysem kereskedik. Péntek lévén a NY ülés 15:00 UTC után amúgy is új trade nélküli.
+# Háttér (régi adat, csak tájékoztató): a D1 trend dollárerős volt (USD long: USDCHF/USDCAD long, EUR/GBP/AUD/NZD short), USDJPY ~158 körül intervenciós kockázat -> none.
 
-GENERATED;2026.10.15 10:00
-VALID_UNTIL;2026.10.15 16:15
-ENABLED;1
+GENERATED;2026.10.16 06:00
+VALID_UNTIL;2026.10.16 16:15
+ENABLED;0
 
-BLACKOUT;2026.10.15 12:00;2026.10.15 13:15;USD
-
-BIAS;EURUSD;short
-ZONE;EURUSD;1.12290;1.12350
-ZONE;EURUSD;1.12390;1.12450
-
-BIAS;GBPUSD;short
-ZONE;GBPUSD;1.32640;1.32700
-ZONE;GBPUSD;1.32730;1.32800
-
+BIAS;EURUSD;none
+BIAS;GBPUSD;none
 BIAS;USDJPY;none
-
-BIAS;USDCHF;long
-ZONE;USDCHF;0.82780;0.82840
-ZONE;USDCHF;0.82670;0.82740
-
-BIAS;USDCAD;long
-ZONE;USDCAD;1.41880;1.41950
-ZONE;USDCAD;1.41720;1.41800
-
-BIAS;AUDUSD;short
-ZONE;AUDUSD;0.69450;0.69520
-ZONE;AUDUSD;0.69720;0.69810
-
-BIAS;NZDUSD;short
-ZONE;NZDUSD;0.56230;0.56300
-ZONE;NZDUSD;0.56330;0.56400
+BIAS;USDCHF;none
+BIAS;USDCAD;none
+BIAS;AUDUSD;none
+BIAS;NZDUSD;none
