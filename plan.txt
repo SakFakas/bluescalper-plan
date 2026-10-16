@@ -1,28 +1,28 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-10-16 (péntek) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő); pénteken 15:00 UTC után az EA nem nyit új trade-et. A téli idő (London 08-12, NY 13-17) október 25-től érvényes. 05:59 UTC körüli futás, a teljes fájl újraírva.
-# Adat: friss, a data/*.csv META utc=2026.10.16 06:13-06:14 (bid: EURUSD 1.12238, GBPUSD 1.32956, USDJPY 157.902, USDCHF 0.82711, USDCAD 1.41852, AUDUSD 0.69381, NZDUSD 0.56462). Szerver-UTC eltérés ~10765 s, a gyertyaidők UTC-re konvertálva.
-# Kép: USD-erős hangulat (forró US CPI/PPI/kiskereskedelem, a Fed szigorító; Warsh nem jelzett irányt). D1: EURUSD és AUDUSD az SMA20/50 alatt (lefelé), USDCHF visszahúzás után az SMA50 felett. GBPUSD, USDCAD, NZDUSD vegyes, USDJPY ~158 körül intervenciós kockázat -> none.
-# USD-irány: EURUSD short, AUDUSD short, USDCHF long = mind USD long (3 azonos irányú trade, az EA max. 2-t enged, a szűrést az EA végzi).
-# Zónák: EURUSD ellenállás az ázsiai csúcs (1.1241) és R1 (1.1258) körül; AUDUSD ellenállás 0.6950-0.6970 (R1 0.6969); USDCHF támasz a tegnapi mélypont (0.8264) és S1 (0.8237) körül. Mind <= ~1 napi ATR-en belül az árfolyamtól.
-# Hírek (UTC): 12:30 US import/export árak, 13:15 US ipari termelés (alacsony hatás), Fed-beszédek napközben, időpont nélkül (Warsh az IMF-találkozón, ázsiai éjszaka, Hammack). Macklem (BoC) 16:15 UTC, az ülés után. Nagy esemény az ülésekben nincs, ezért csak rövid USD blackout az import árak körül.
+# Terv a 2026-10-16 (péntek) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő); pénteken 15:00 UTC után az EA nem nyit új trade-et. A téli idő (London 08-12, NY 13-17) október 25-től érvényes. 09:59 UTC körüli futás (frissítés), a teljes fájl újraírva.
+# Adat: friss, a data/*.csv META utc=2026.10.16 09:13-09:14 (bid: EURUSD 1.12535, GBPUSD 1.33339, USDJPY 157.964, USDCHF 0.82336, USDCAD 1.41575, AUDUSD 0.69610, NZDUSD 0.56704). Szerver-UTC eltérés 10764-10765 s, a gyertyaidők UTC-re konvertálva.
+# Kép: reggel a dollár gyengült (Warsh nem jelzett irányt, az ázsiai ülésben a USD enyhén esett; EURUSD +30 pip, AUDUSD +40 pip az éjszakai mélypontról). D1 trend marad: EURUSD és AUDUSD az SMA20/50 alatt (lefelé), USDCHF az SMA20 alatt, de az SMA50 (0.8181) felett. GBPUSD, USDCAD, NZDUSD vegyes (SMA20 és SMA50 között/körül), USDJPY ~158 körül intervenciós kockázat -> none.
+# USD-irány: EURUSD short, AUDUSD short, USDCHF long = mind USD long (3 azonos irányú trade, az EA max. 2-t enged, a szűrést az EA végzi). Figyelem: a reggeli mozgás ellen megy (visszapattanás utáni belépés ellenállásnál / mélypontnál), ezért csak zónából.
+# Zónák: EURUSD ellenállás 1.1268-1.1276 és az SMA20 (1.1295) körül; AUDUSD ellenállás 0.6972-0.6980 (tegnapi csúcs 0.69804) és 0.6995-0.7002 (SMA20 0.6998); USDCHF támasz 0.8215-0.8223 és 0.8200-0.8208 (a reggeli mélypont 0.8241 alatt). Mind <= ~1 napi ATR-en belül az árfolyamtól.
+# Hírek (UTC): 12:30 US import/export árak (blackout), Fed-beszédek napközben (Hammack, Bailey, Nagel az IMF-találkozón, pontos időpont nincs megerősítve), 14:00 FX opciólejárat (NY 10:00), a 13:15 US ipari termelés nem megerősített, alacsony hatás. Warsh (ázsiai ülés) és Macklem (BoC, 04:15) már elhangzott. Nagy esemény az ülésekben nincs.
 # Péntek: 15:00 UTC után nincs új trade; hétvégi gap-kockázat, a zónákat kis pozícióhoz érdemes használni.
 
-GENERATED;2026.10.16 06:16
+GENERATED;2026.10.16 10:01
 VALID_UNTIL;2026.10.16 16:15
 ENABLED;1
 
 BLACKOUT;2026.10.16 12:25;2026.10.16 12:40;USD
 
 BIAS;EURUSD;short
-ZONE;EURUSD;1.12400;1.12480
-ZONE;EURUSD;1.12520;1.12600
+ZONE;EURUSD;1.12680;1.12760
+ZONE;EURUSD;1.12900;1.12980
 BIAS;GBPUSD;none
 BIAS;USDJPY;none
 BIAS;USDCHF;long
-ZONE;USDCHF;0.82600;0.82680
-ZONE;USDCHF;0.82370;0.82450
+ZONE;USDCHF;0.82150;0.82230
+ZONE;USDCHF;0.82000;0.82080
 BIAS;USDCAD;none
 BIAS;AUDUSD;short
-ZONE;AUDUSD;0.69480;0.69560
-ZONE;AUDUSD;0.69640;0.69720
+ZONE;AUDUSD;0.69720;0.69800
+ZONE;AUDUSD;0.69950;0.70020
 BIAS;NZDUSD;none
