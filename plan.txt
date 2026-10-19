@@ -1,24 +1,25 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-10-19 (hétfő) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő). A téli idő (London 08-12, NY 13-17) október 25-től érvényes. 05:59 UTC körüli futás (napi terv), a teljes fájl újraírva.
-# Adat: friss, a data/*.csv META utc=2026.10.19 05:13-05:14 (kb. 45 perces; bid: EURUSD 1.12311, GBPUSD 1.33297, USDJPY 158.109, USDCHF 0.82429, USDCAD 1.41197, AUDUSD 0.69738, NZDUSD 0.56554). Szerver-UTC eltérés 10752-10753 s, a gyertyaidők UTC-re konvertálva.
-# Kép: a péntek gyengébb dollárral zárt (EURUSD, GBPUSD, AUDUSD, NZDUSD feljebb, USDCHF és USDCAD lejjebb), hétfő reggel az USD enyhén erősödik (EURUSD -0.1%). D1 trend: EURUSD és AUDUSD az SMA20/50 alatt (lefelé), USDCHF az SMA20 (0.8297) alatt, lejjebb tolódó csúcsokkal, de az SMA50 (0.8184) felett. GBPUSD, USDCAD, NZDUSD vegyes/oldalazó, USDJPY ~158 körül intervenciós kockázat -> none.
+# Terv a 2026-10-19 (hétfő) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő). A téli idő (London 08-12, NY 13-17) október 25-től érvényes. 09:59 UTC körüli futás (frissítés a London vége előtt és a NY ülésre), a teljes fájl újraírva.
+# Adat: friss, a data/*.csv META utc=2026.10.19 09:13-09:14 (kb. 50 perces; bid: EURUSD 1.12110, GBPUSD 1.33284, USDJPY 158.153, USDCHF 0.82412, USDCAD 1.40934, AUDUSD 0.69767, NZDUSD 0.56603). Szerver-UTC eltérés 10751-10752 s, a gyertyaidők UTC-re konvertálva.
+# Kép: a D1 trend EURUSD és AUDUSD esetén lefelé (SMA20/50 alatt, lejjebb tolódó csúcsok), USDCHF az SMA20 (0.8297) alatt. A London nyitás után az EURUSD az Ázsia-csúcsról (1.12347) 1.11861-ig esett, majd 1.1211-re korrigált; az AUDUSD 0.6962-0.6980 sávban oldalaz. GBPUSD, USDCAD, NZDUSD vegyes/oldalazó -> none. USDJPY ~158 körül intervenciós kockázat -> none.
 # USD-irány: EURUSD short és AUDUSD short = USD long (2 azonos irányú trade, az EA max. 2-t enged); USDCHF short = USD short, ellentétes irány, diverzifikál. Mind ellenállásnál, visszapattanás utáni belépéssel.
-# Zónák: EURUSD ellenállás 1.1265-1.1273 (pénteki csúcs 1.12694) és 1.1280-1.1288 (SMA20 1.1283); AUDUSD ellenállás 0.6980-0.6987 (csütörtöki csúcs 0.69804) és 0.6995-0.7003 (SMA20 0.6989, szerdai csúcs 0.70131 felett); USDCHF ellenállás 0.8272-0.8282 (pénteki csúcs 0.82823). Mind <= ~1 napi ATR-en belül az árfolyamtól.
-# Hírek (UTC): 12:30 Kanada CPI (NY nyitás, CAD blackout; USDCAD none), 14:00 US NAHB lakáspiaci index (alacsony hatás, nincs blackout). Ázsiában China Q3 GDP/kiskereskedelem a vártnál jobb (02:00). Warsh pénteken nem jelzett irányt, az október 27-28-i FOMC-ra ~84% a változatlanság. Fed-, EKB-, BoE-beszéd nem megerősített. Kedden 06:00 UK munkaerőpiac, szerdán 06:00 UK CPI. Nagy esemény az ülésekben nincs.
-# Ázsia szakasz: szűk sáv (EURUSD 1.1182-1.1235, AUDUSD 0.6951-0.6978), a London nyitás előtt nincs kitörés.
+# Zónák: EURUSD ellenállás 1.1223-1.1235 (Ázsia-csúcs 1.12347) és 1.1265-1.1273 (pénteki csúcs 1.12694); AUDUSD ellenállás 0.6980-0.6987 (mai/csütörtöki csúcs 0.69805) és 0.6995-0.7003 (SMA20 0.6989); USDCHF ellenállás 0.8248-0.8256 (mai csúcs 0.82498) és 0.8272-0.8282 (pénteki csúcs 0.82823). Mind <= ~1 napi ATR-en belül az árfolyamtól.
+# Hírek (UTC): 12:30 Kanada CPI (NY nyitás, CAD blackout; USDCAD none). Kanada gyenge szeptemberi munkaerőpiac (-68k), AUD is gyenge (-39k munkahely). Fed-blackout október 17-29, Fed-beszéd nem várható; Fed-, EKB-, BoE-beszéd nem megerősített. Kedden 06:00 UK munkaerőpiac, szerdán 06:00 UK CPI. Október 27-28 FOMC. Nagy esemény az ülésekben nincs.
+# Ázsia szakasz: EURUSD 1.12169-1.12347, AUDUSD 0.69618-0.69801.
 
-GENERATED;2026.10.19 06:01
+GENERATED;2026.10.19 10:04
 VALID_UNTIL;2026.10.19 16:15
 ENABLED;1
 
 BLACKOUT;2026.10.19 12:25;2026.10.19 12:40;CAD
 
 BIAS;EURUSD;short
+ZONE;EURUSD;1.12230;1.12350
 ZONE;EURUSD;1.12650;1.12730
-ZONE;EURUSD;1.12800;1.12880
 BIAS;GBPUSD;none
 BIAS;USDJPY;none
 BIAS;USDCHF;short
+ZONE;USDCHF;0.82480;0.82560
 ZONE;USDCHF;0.82720;0.82820
 BIAS;USDCAD;none
 BIAS;AUDUSD;short
