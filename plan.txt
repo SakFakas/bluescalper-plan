@@ -1,25 +1,29 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-10-20 (kedd) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő). A téli idő (London 08-12, NY 13-17) október 25-től érvényes. 09:59 UTC körüli futás (frissítés a London vége előtt és a NY ülésre), a teljes fájl újraírva.
-# Adat: friss, a data/*.csv META utc=2026.10.20 09:52-09:53 (bid: EURUSD 1.12154, GBPUSD 1.33469, USDJPY 158.101, USDCHF 0.82444, USDCAD 1.40534, AUDUSD 0.69890, NZDUSD 0.56809). Szerver-UTC eltérés 10747-10748 s, a gyertyaidők UTC-re konvertálva.
-# Kép: EURUSD D1 lefelé (SMA20 1.1270 és SMA50 1.1462 alatt), London eddig 1.12044-1.12343, Ázsia 1.12137-1.12352; gyenge, 1.1250 alatt. AUDUSD az SMA20 (0.6982) körül, SMA50 (0.7078) alatt; 0.7000 felé tapogat, a London csúcs 0.69987, a 0.7000 kerek szint és a hétfői csúcs 0.69928 fölötti ellenállás. USDCHF az SMA20 (0.8300) alatt, London csúcs 0.82567, Ázsia csúcs 0.82672, hétfői csúcs 0.82704. GBPUSD (UK munkaerőpiaci adat után +0.4%, 1.3347), USDCAD (esik, 1.4053), NZDUSD (SMA50 alatt, felpattanás) vegyes -> none. USDJPY ~158.10, intervenciós kockázat -> none.
-# USD-irány: EURUSD short és AUDUSD short = USD long (2 azonos irányú trade, az EA max. 2-t enged); USDCHF short = USD short, ellentétes irány, diverzifikál. Mind ellenállásnál, visszapattanás utáni belépéssel.
-# Zónák: EURUSD ellenállás 1.1230-1.1240 (Ázsia/London csúcs 1.12352) és 1.1265-1.1273 (pénteki csúcs 1.12694, SMA20 1.1270); AUDUSD ellenállás 0.6998-0.7006 (London csúcs 0.69987, 0.7000) és 0.7010-0.7018 (okt. 13 csúcs 0.70131); USDCHF ellenállás 0.8264-0.8272 (Ázsia 0.82672, hétfői csúcs 0.82704) és 0.8296-0.8304 (SMA20 0.8300). Mind <= ~1 napi ATR-en belül az árfolyamtól (ATR14: EURUSD 0.0075, AUDUSD 0.0049, USDCHF 0.0055).
-# Hírek (UTC): ZEW (EUR) és UK munkaerőpiac már kint volt a London nyitás előtt/körül. 12:30 US lakásépítés/építési engedélyek (alacsony hatás, nincs blackout), 14:00 GDPNow/függő lakáseladások (alacsony). Fed-blackout október 17-29, Fed-/EKB-/BoE-beszédet nem találtam megerősítve. Szerdán UK CPI, október 27-28 FOMC. Nagy esemény az ülésekben nincs, ezért nincs BLACKOUT sor. A naptárforrások részlegesek (idők nem mindenhol szerepeltek).
+# Terv a 2026-10-21 (szerda) ülésekre: LONDON 07:00-11:00 UTC (09-13 magyar idő) és NEW YORK 12:00-16:00 UTC (14-18 magyar idő). A téli idő (London 08-12, NY 13-17) október 25-től érvényes. 05:59 UTC körüli futás (napi terv, elsősorban a London ülésre, mindkét ülésre érvényes zónákkal), a teljes fájl újraírva.
+# Adat: friss, a data/*.csv META utc=2026.10.21 05:52-05:53 (bid: EURUSD 1.12219, GBPUSD 1.33726, USDJPY 158.183, USDCHF 0.82573, USDCAD 1.40620, AUDUSD 0.70126, NZDUSD 0.56731). Szerver-UTC eltérés 10743-10744 s, a gyertyaidők UTC-re konvertálva. Az utolsó H1 gyertya 04:00 UTC, az Ázsia szakasz adatai ezzel teljesek.
+# Kép: EURUSD D1 lefelé (SMA20 1.1260 és SMA50 1.1456 alatt), tegnapi csúcs 1.12606, mai Ázsia csúcs 1.12311 -> short ellenállásnál. USDCHF az SMA20 (0.8302) alatt, tegnapi csúcs 0.82699, hétfői 0.82704, a bid 0.8257 -> short ellenállásnál. USDCAD esik (SMA20 1.4194 alatt, tegnap 1.4058 zárás), tegnapi csúcs 1.41094 -> short visszapattanásnál. AUDUSD átlépte a 0.7000-et (bid 0.7013, Ázsia csúcs 0.70293), D1 még az SMA50 (0.7077) alatt -> none, nincs tiszta belépő. GBPUSD (UK CPI 06:00 UTC, a terv írásakor az eredmény még nem ismert) és NZDUSD (vegyes) -> none. USDJPY ~158.18, intervenciós kockázat -> none.
+# USD-irány: EURUSD short = USD long; USDCHF short és USDCAD short = USD short (2 azonos irányú trade, az EA max. 2-t enged). Mind ellenállásnál, visszapattanás utáni belépéssel.
+# Zónák: EURUSD ellenállás 1.1230-1.1240 (mai Ázsia csúcs 1.12311, tegnapi zárás 1.12366) és 1.1258-1.1270 (tegnapi csúcs 1.12606, okt. 15 csúcs 1.12694, SMA20); USDCHF ellenállás 0.8264-0.8272 (tegnapi 0.82699, hétfői 0.82704) és 0.8296-0.8304 (SMA20 0.8302); USDCAD ellenállás 1.4095-1.4112 (tegnapi csúcs 1.41094, hétfői zárás 1.41105) és 1.4125-1.4135 (hétfői csúcs 1.41331). Mind <= ~1 napi ATR-en belül az árfolyamtól (ATR14: EURUSD 0.0075, USDCHF 0.0055, USDCAD 0.0069).
+# Hírek (UTC, egyetlen forrás, az időzónát a UK CPI 06:00 UTC-hez igazodva következtettem, ezért az idők közelítők): UK CPI 06:00 (London nyitás előtt, nincs blackout, a London nyitás volatilis lehet); 13:00 Bailey (BoE) beszéd -> GBP blackout; 14:30 EIA olajkészlet -> CAD blackout; 16:00 Lagarde (EKB) beszéd, a NY ülés végén -> EUR blackout 15:45-től. Ázsia: Lane 04:15 (lezárt). Fed-blackout október 17-29, FOMC október 27-28, EKB október 29. A naptárforrások részlegesek, a 10:00 körüli futás pontosítja.
 
-GENERATED;2026.10.20 10:05
-VALID_UNTIL;2026.10.20 16:15
+GENERATED;2026.10.21 06:01
+VALID_UNTIL;2026.10.21 16:15
 ENABLED;1
+
+BLACKOUT;2026.10.21 12:45;2026.10.21 13:45;GBP
+BLACKOUT;2026.10.21 14:20;2026.10.21 14:50;CAD
+BLACKOUT;2026.10.21 15:45;2026.10.21 16:15;EUR
 
 BIAS;EURUSD;short
 ZONE;EURUSD;1.12300;1.12400
-ZONE;EURUSD;1.12650;1.12730
+ZONE;EURUSD;1.12580;1.12700
 BIAS;GBPUSD;none
 BIAS;USDJPY;none
 BIAS;USDCHF;short
 ZONE;USDCHF;0.82640;0.82720
 ZONE;USDCHF;0.82960;0.83040
-BIAS;USDCAD;none
-BIAS;AUDUSD;short
-ZONE;AUDUSD;0.69980;0.70060
-ZONE;AUDUSD;0.70100;0.70180
+BIAS;USDCAD;short
+ZONE;USDCAD;1.40950;1.41120
+ZONE;USDCAD;1.41250;1.41350
+BIAS;AUDUSD;none
 BIAS;NZDUSD;none
