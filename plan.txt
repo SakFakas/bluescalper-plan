@@ -1,25 +1,28 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-10-26 (hétfő) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Hétfő, a péntek 15:00 UTC-s korlát nem érinti. 09:59 UTC körüli frissítő futás: London vége előtt, elsősorban a NY ülésre, a teljes fájl újraírva.
-# Adat: friss, a data/*.csv META utc=2026.10.26 09:52-09:53 (bid: EURUSD 1.12077, GBPUSD 1.33474, USDJPY 157.317, USDCHF 0.82592, USDCAD 1.40135, AUDUSD 0.70380, NZDUSD 0.56898). Szerver-UTC eltérés 10782-10783 s (a META szerint), a gyertyaidők UTC-re konvertálva.
-# Kép: a dollár a London ülésen enyhén erősödött (EURUSD 1.1227 csúcsról 1.1208-ra, GBPUSD 1.3387 csúcsról 1.3347-re), de a D1 szerkezet változatlan. EURUSD D1 lefelé, mai csúcs 1.12265 (pénteki csúcs 1.12264 - dupla teszt), csütörtöki csúcs 1.12560, okt. 20-i csúcs 1.12606 -> short csak ellenállásnál. USDCHF mai csúcs 0.82605, D1 csúcsok 0.82699-0.82704, az árfolyam az ellenállás alatt/szélén -> short. USDCAD mai csúcs 1.40263, 24 órás csúcs 1.40422, csütörtöki csúcs 1.40489 -> short visszapattanásnál. GBPUSD, AUDUSD, NZDUSD vegyes, nincs tiszta szint -> none. USDJPY 157.32, intervenciós kockázat (okt. 22-i hirtelen esés 158.1-ről 156.7-re) -> none.
-# USD-irány: EURUSD short = USD long; USDCHF short és USDCAD short = USD short (az EA max. 2 azonos irányú trade-et enged). Mind ellenállásnál, visszapattanás utáni belépéssel.
-# Zónák: EURUSD ellenállás 1.1225-1.1240 és 1.1255-1.1265; USDCHF ellenállás 0.8259-0.8268 és 0.8269-0.8278; USDCAD ellenállás 1.4015-1.4025 és 1.4040-1.4050. Mind <= ~1 napi ATR-en belül (ATR14: EURUSD 0.0064, USDCHF 0.0049, USDCAD 0.0068).
-# Hírek (UTC): a keresés kevés hírt adott; hétfőn nincs ismert nagy hatású esemény az ülésekben (német Ifo ~09:00 már lezajlott, a Dallas Fed ipari index ~14:30 kis hatású) -> nincs blackout. A héten: FOMC okt. 28 (18:00 UTC, sajtótájékoztató 18:30), BoC és RBNZ okt. 28, EKB okt. 29, BoJ okt. 30 -> a héten várhatóan óvatos, szűk piac. Az időpontok nem mind ellenőrzöttek.
+# Terv a 2026-10-27 (kedd) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Kedd, a péntek 15:00 UTC-s korlát nem érinti. 05:59 UTC körüli futás: elsősorban a London ülésre, mindkét ülésre érvényes zónákkal; a 09:59 UTC körüli futás frissíti, a teljes fájl újraírva.
+# Adat: friss, a data/*.csv META utc=2026.10.27 05:52-05:53 (bid: EURUSD 1.11670, GBPUSD 1.33321, USDJPY 157.714, USDCHF 0.82787, USDCAD 1.40173, AUDUSD 0.70210, NZDUSD 0.56923). Szerver-UTC eltérés 10778-10779 s (a META szerint), a gyertyaidők UTC-re konvertálva.
+# Kép: a dollár tegnap erősödött (EURUSD 1.1227 -> 1.1167, D1 lefelé: 40 napja 1.159, USDCHF 0.8227-ről 0.8279-re tört). Ázsia szakasz (UTC): EURUSD 1.11626-1.11768, USDCHF 0.82726-0.82839, USDCAD 1.40090-1.40237. EURUSD short csak ellenállásnál: mai csúcs 1.11768, pivot 1.1191, R1 1.12095, 24 órás csúcs 1.12199, hétfői csúcs 1.12265. USDCHF long csak visszahúzásnál a kitörési szint/pivot (0.8261) felett támaszon; az árfolyam a hétfői csúcson (0.82787) áll, nem üldözzük. USDCAD tartomány 1.3968-1.4055, D1 lefelé -> short ellenállásnál (hétfői csúcs 1.40553, pivot R1 1.4046). GBPUSD, AUDUSD, NZDUSD tartományban, nincs tiszta szint -> none. USDJPY 157.7, intervenciós kockázat (okt. 21-i esés 158.25-ről 156.7-re) -> none.
+# USD-irány: EURUSD short = USD long, USDCHF long = USD long (2 azonos irányú, az EA limitjén belül); USDCAD short = USD short (ellentétes). Mind szintnél, visszapattanás/visszahúzás utáni belépéssel.
+# Zónák: EURUSD ellenállás 1.1175-1.1190 és 1.1205-1.1220; USDCHF támasz 0.8258-0.8270 és 0.8232-0.8245; USDCAD ellenállás 1.4040-1.4056 és 1.4080-1.4095. Mind <= ~1 napi ATR-en belül (ATR14: EURUSD 0.0062, USDCHF 0.0050, USDCAD 0.0066).
+# Hírek (UTC): 12:30 USD tartós fogyasztási cikkek (várható 0.7%) -> BLACKOUT USD 12:20-12:45 (NY nyitás előtt); 14:00 USD CB fogyasztói bizalom (81.5) és új lakáseladások -> rövid USD blackout 13:55-14:05. London ülésben nincs ismert nagy hatású EUR/GBP esemény. A héten: RBNZ szerda 01:00, BoC szerda 13:45 (CAD óvatosan), FOMC szerda 18:00, USA GDP és EKB csütörtök (12:30 / 13:15), BoJ péntek 03:00 -> FOMC előtti szűk, óvatos piac várható. A naptár-időpontok forrásonként eltérhetnek, nem mind ellenőrzöttek.
 
-GENERATED;2026.10.26 10:03
-VALID_UNTIL;2026.10.26 17:15
+GENERATED;2026.10.27 06:08
+VALID_UNTIL;2026.10.27 17:15
 ENABLED;1
 
+BLACKOUT;2026.10.27 12:20;2026.10.27 12:45;USD
+BLACKOUT;2026.10.27 13:55;2026.10.27 14:05;USD
+
 BIAS;EURUSD;short
-ZONE;EURUSD;1.12250;1.12400
-ZONE;EURUSD;1.12550;1.12650
+ZONE;EURUSD;1.11750;1.11900
+ZONE;EURUSD;1.12050;1.12200
 BIAS;GBPUSD;none
 BIAS;USDJPY;none
-BIAS;USDCHF;short
-ZONE;USDCHF;0.82590;0.82680
-ZONE;USDCHF;0.82690;0.82780
+BIAS;USDCHF;long
+ZONE;USDCHF;0.82580;0.82700
+ZONE;USDCHF;0.82320;0.82450
 BIAS;USDCAD;short
-ZONE;USDCAD;1.40150;1.40250
-ZONE;USDCAD;1.40400;1.40500
+ZONE;USDCAD;1.40400;1.40560
+ZONE;USDCAD;1.40800;1.40950
 BIAS;AUDUSD;none
 BIAS;NZDUSD;none
