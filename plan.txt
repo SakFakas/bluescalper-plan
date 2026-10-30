@@ -1,12 +1,12 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-10-30 (péntek) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Péntek: 15:00 UTC után az EA nem nyit új trade-et, így a NY ülésből csak 13:00-15:00 használható. Ez a 05:59 UTC körüli reggeli terv, elsősorban a London ülésre, de mindkét ülésre érvényes zónákkal.
-# Adat: friss, a data/*.csv META utc=2026.10.30 05:52-05:53 (bid: EURUSD 1.11816, GBPUSD 1.33856, USDJPY 157.642, USDCHF 0.82253, USDCAD 1.39709, AUDUSD 0.70356, NZDUSD 0.56364). Szerver-UTC eltérés 10766 s (kb. UTC+3, konzisztens). Ázsia eddigi sáv (H1): EURUSD 1.11735-1.12147, GBPUSD 1.33732-1.34074, USDCHF 0.81936-0.82466, USDCAD 1.39589-1.39918.
-# Kép: tegnap forró PCE (főindex 3.6% éves, mag 3.1%) és erős Q3 GDP, a BoJ ma tartotta a kamatot 1.25%-on (8-1), a dollár mégis gyengébb (DXY ~101.8), a majorok visszapattantak. EURUSD D1 20 napos sáv 1.1104-1.1287, tegnapi mélypont 1.11044, zárás 1.11820, Ázsia csúcs 1.12147 -> short a visszapattanás ellenállásánál. GBPUSD a 20 napos sáv tetején (csúcs 1.34188, Ázsia csúcs 1.34074) -> short ellenállásnál. USDCHF tegnap 0.8297-ről 0.8241-re esett, ma 0.8225, Ázsia mélypont 0.81936 -> long csak a mélypont körüli támaszon. USDCAD új mélypont 1.39589 (20 napos mélypont 1.39651 alatt) -> short csak a törésszint feletti ellenállásnál (visszapattanásnál). USDJPY 157.6, intervenciós kockázat és BoJ utáni mozgás -> none. AUDUSD (a 20 napos csúcs közelében) és NZDUSD (RBNZ utáni zaj) -> none, nincs tiszta szint.
-# USD-irány: EURUSD short, GBPUSD short és USDCHF long mind USD long (3 jelölt, az EA max. 2 azonos irányú trade-et enged, a többit az EA szűri); USDCAD short = USD short (ellentétes irány, kisebb súly). A zónák mind <= ~1 napi ATR-en belül (ATR14 kb.: EURUSD 0.0061, GBPUSD 0.0073, USDCHF 0.0053, USDCAD 0.0062).
-# Hírek (UTC, ActionForex naptár): 10:00 eurózóna Q3 GDP előzetes (várt 0.2% q/q) -> BLACKOUT EUR 09:55-10:10; 12:30 USA Employment Cost Index Q3 (várt 0.8%) és kanadai GDP augusztus (várt 0.2%) -> BLACKOUT USD és CAD 12:25-12:40; 13:00 német CPI előzetes -> BLACKOUT EUR 12:58-13:08; 13:45 Chicago PMI (kisebb hatás, nincs blackout). Fed-beszédek időpontja nem ismert. Hónap végi flow-k (London fix 16:00 UTC, de péntek 15:00 után nincs új trade).
-# Megjegyzés: pénteki nap, hónap vége, forró infláció miatt a Fed-kamatemelés kockázata él -> a dollár iránya bizonytalan, ezért szűk, ellenállás/támasz oldali zónák.
+# Terv a 2026-10-30 (péntek) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Péntek: 15:00 UTC után az EA nem nyit új trade-et, így a NY ülésből csak 13:00-15:00 használható. Ez a 09:59 UTC körüli frissítés: a London ülés második fele (10:00-12:00) és a NY ülés.
+# Adat: friss, a data/*.csv META utc=2026.10.30 09:38 (bid: EURUSD 1.11935, GBPUSD 1.34252, USDJPY 157.307, USDCHF 0.82139, USDCAD 1.39623, AUDUSD 0.70310, NZDUSD 0.56437). Szerver-UTC eltérés 10764-10765 s (kb. UTC+3, konzisztens). Mai sáv (00:00 UTC óta, H1): EURUSD 1.11760-1.12147, GBPUSD 1.33756-1.34181, USDCHF 0.81936-0.82390, USDCAD 1.39586-1.39869.
+# Kép: tegnapi forró PCE és erős GDP után a dollár ma gyengébb, a majorok visszapattantak. EURUSD D1 lefelé tart (20 napos sáv 1.1104-1.1287), a mai csúcs 1.12147 és a 10.23/10.26 csúcsok 1.1226 körül ellenállás -> short a visszapattanás ellenállásánál. GBPUSD átlépte a 20 napos csúcsot (1.34188), jelenleg 1.3425 körül, nincs tiszta ellenállás felette és a szint feletti short kitörés ellen menne -> none. USDCHF D1 lefelé tart (0.8395 -> 0.8214), ma kiírta a 0.81936-ot, a 20 napos mélypont 0.81915 -> long csak a mélypont körüli támaszon. USDCAD új napi mélypont 1.39586 (a 20 napos mélypont 1.39651 alatt) -> short csak a visszapattanás ellenállásánál (tegnapi zárás 1.39889, tegnapi csúcs 1.40144). USDJPY 157.3, intervenciós kockázat -> none. AUDUSD és NZDUSD (RBNZ utáni zaj, vegyes kép) -> none, nincs tiszta szint.
+# USD-irány: EURUSD short és USDCHF long mind USD long (az EA max. 2 azonos irányú trade-et enged); USDCAD short = USD short (ellentétes irány, kisebb súly). A zónák ~1 napi ATR-en belül (ATR14 kb.: EURUSD 0.0061, USDCHF 0.0053, USDCAD 0.0062).
+# Hírek (UTC): 10:00 eurózóna Q3 GDP előzetes (várhatóan 0.2% q/q, kb. most fut) -> BLACKOUT EUR 09:55-10:10; 12:30 USA Employment Cost Index Q3 (várt 0.8%) és kanadai GDP augusztus (várt 0.2%) -> BLACKOUT USD és CAD 12:25-12:40 (a két ülés közötti szünetben); 13:00 német CPI előzetes -> BLACKOUT EUR 12:58-13:08; 13:45 Chicago PMI (kisebb hatás, nincs blackout). Fed-beszédek időpontja nem ismert. Hónap végi flow-k (London fix 16:00 UTC, de péntek 15:00 után nincs új trade).
+# Megjegyzés: pénteki nap, hónap vége, a Fed-kamatemelés kockázata él -> a dollár iránya bizonytalan, ezért szűk, ellenállás/támasz oldali zónák.
 
-GENERATED;2026.10.30 06:02
+GENERATED;2026.10.30 10:01
 VALID_UNTIL;2026.10.30 17:15
 ENABLED;1
 
@@ -16,17 +16,15 @@ BLACKOUT;2026.10.30 12:25;2026.10.30 12:40;CAD
 BLACKOUT;2026.10.30 12:58;2026.10.30 13:08;EUR
 
 BIAS;EURUSD;short
-ZONE;EURUSD;1.12100;1.12180
+ZONE;EURUSD;1.12110;1.12190
 ZONE;EURUSD;1.12250;1.12330
-BIAS;GBPUSD;short
-ZONE;GBPUSD;1.34030;1.34120
-ZONE;GBPUSD;1.34170;1.34270
+BIAS;GBPUSD;none
 BIAS;USDJPY;none
 BIAS;USDCHF;long
 ZONE;USDCHF;0.81920;0.82000
-ZONE;USDCHF;0.82080;0.82170
+ZONE;USDCHF;0.82040;0.82110
 BIAS;USDCAD;short
-ZONE;USDCAD;1.39920;1.40010
-ZONE;USDCAD;1.40100;1.40200
+ZONE;USDCAD;1.39880;1.39960
+ZONE;USDCAD;1.40080;1.40160
 BIAS;AUDUSD;none
 BIAS;NZDUSD;none
