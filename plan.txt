@@ -1,32 +1,32 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-11-04 (szerda) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 06:00 körüli (napi) futás: elsősorban a London ülésre, de mindkét ülésre érvényes zónákkal. Szerda, péntek-korlát nincs.
-# Adat: friss, a data/*.csv META utc=2026.11.04 05:38 (bid: EURUSD 1.12332, GBPUSD 1.34545, USDJPY 157.895, USDCHF 0.81659, USDCAD 1.39689, AUDUSD 0.69788, NZDUSD 0.55980). Szerver-UTC eltérés 7144-7145 s (UTC+2, téli idő, konzisztens). ATR14 (D1) kb.: EURUSD 0.0060, GBPUSD 0.0067, USDCHF 0.0055, USDCAD 0.0057.
-# Kép: az amerikai félidős választás éjjelén (22 UTC után) a dollár szélesen gyengült: EURUSD +50 pip (Ázsia-csúcs 1.12628), GBPUSD 1.3478-ig, USDCHF 0.8127-ig, USDJPY 158.7-ről 157.4-ig. EURUSD D1 lefelé (SMA20 1.1193 < SMA50 1.1369) -> short a pattanás tetején: Ázsia-csúcs 1.1258-1.1265, ill. októberi csúcsok 1.1276-1.1287. GBPUSD a 20 napos csúcs fölött -> long csak visszahúzódásnál támaszon: Ázsia-mélypont/tegnapi csúcs 1.3426-1.3434, mélyebben 1.3396-1.3404. USDCHF mélypont 0.8127 után visszapattant 0.8166-ra -> short a pattanás ellenállásánál: Ázsia-csúcs 0.8195-0.8203, tegnapi csúcs 0.8213-0.8220. USDCAD 1.3969, az Ázsia-csúcs 1.4005 és a tegnapi csúcs 1.4014 ellenállás -> short. USDJPY intervenciós kockázat és nagy kilengés -> none. AUDUSD és NZDUSD: nincs tiszta szint (NZD erősen lefelé, de a visszapattanási szint nem egyértelmű) -> none.
+# Terv a 2026-11-04 (szerda) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 10:00 körüli (frissítő) futás: London vége előtt és a NY ülésre, a teljes fájl újraírva. Szerda, péntek-korlát nincs.
+# Adat: a data/*.csv META utc=2026.11.04 09:38 (AUDUSD, NZDUSD, USDJPY, USDCHF, USDCAD, ~20 perces), de EURUSD és GBPUSD META utc=08:38, vagyis ezek ~1,5 órásak (elavultabbak, óvatos zónák). Bid: EURUSD 1.12441, GBPUSD 1.34802, USDJPY 158.296, USDCHF 0.81615, USDCAD 1.39499, AUDUSD 0.70082, NZDUSD 0.56343. Szerver-UTC eltérés 7143-7144 s (UTC+2, téli idő, konzisztens). ATR14 (D1) kb.: EURUSD 0.0060, GBPUSD 0.0067, USDCHF 0.0055, USDCAD 0.0057.
+# Kép: az amerikai félidős választás után (Demokraták átvették a Kongresszust) a dollár szélesen gyengült (USDIDX kb. -0.4%, 10 éves hozam ~4.90%). EURUSD pattanás Ázsia/London-csúcsig 1.1263 -> short a csúcs körül: 1.1258-1.1265, ill. 1.1276-1.1287. GBPUSD új napi csúcs 1.3486 -> long csak visszahúzódásnál támaszon: 1.3448-1.3456 (London-délelőtti mélypontok), mélyebben 1.3426-1.3434. USDCHF 0.8131 mélypont után 0.8179-ig pattant vissza -> short ellenállásnál: 0.8173-0.8179 (London-csúcs), ill. 0.8195-0.8203. USDCAD ellenállás 1.3970-1.3976 (London-csúcs), ill. 1.3993-1.4005 -> short. USDJPY 157.4-ről 158.3-ra visszapattant, intervenciós kockázat és nagy kilengés -> none. AUDUSD 0.6955-ről 0.7009-ig pattant, NZDUSD 0.5581-ről 0.5634-ig, de nincs tiszta belépési szint -> none.
 # USD-irány: GBPUSD long, USDCHF short és USDCAD short = USD short (3 pár), EURUSD short = USD long (fade). Az EA max. 2 azonos USD-irányú trade-et enged, így nem kell kézzel szűrni.
-# Hírek (UTC, a pontos időket a szokásos ütemezésből becsültem, a naptár nem adott időt): 09:00 EZ és 09:30 UK szolgáltatás PMI (végleges), 13:15 ADP + 13:30 külkereskedelmi mérleg, 15:00 ISM szolgáltatás, 15:30 EIA olajkészlet (CAD), ECB Lane beszéde (idő ismeretlen, nincs blackout), Riksbank/NBP/BCB döntések (nem kereskedett párok). Fed-kamatdöntés nincs. A választási eredmények utórezgése a dollárban London nyitáskor még erős lehet.
+# Hírek (UTC, XTB naptár): 10:00 EZ előzetes HICP infláció (EUR, London-ülésen belül), 13:15 US ADP, 13:30 US külkereskedelmi mérleg + CAD külkereskedelmi mérleg, 15:00 ISM szolgáltatás, 15:30 EIA olajkészlet (CAD). Fed-kamatdöntés és -beszéd nem szerepel a naptárban. Riksbank 08:30 (nem kereskedett pár).
 # Csütörtökön 12:00 BoE, pénteken 13:30 NFP.
 
-GENERATED;2026.11.04 06:00
+GENERATED;2026.11.04 10:01
 VALID_UNTIL;2026.11.04 17:15
 ENABLED;1
 
-BLACKOUT;2026.11.04 08:55;2026.11.04 09:05;EUR
-BLACKOUT;2026.11.04 09:25;2026.11.04 09:35;GBP
+BLACKOUT;2026.11.04 09:55;2026.11.04 10:05;EUR
 BLACKOUT;2026.11.04 13:10;2026.11.04 13:35;USD
-BLACKOUT;2026.11.04 14:55;2026.11.04 15:35;USD
+BLACKOUT;2026.11.04 14:55;2026.11.04 15:40;USD
+BLACKOUT;2026.11.04 15:25;2026.11.04 15:35;CAD
 
 BIAS;EURUSD;short
 ZONE;EURUSD;1.12580;1.12650
 ZONE;EURUSD;1.12760;1.12870
 BIAS;GBPUSD;long
+ZONE;GBPUSD;1.34480;1.34560
 ZONE;GBPUSD;1.34260;1.34340
-ZONE;GBPUSD;1.33960;1.34040
 BIAS;USDJPY;none
 BIAS;USDCHF;short
+ZONE;USDCHF;0.81730;0.81790
 ZONE;USDCHF;0.81950;0.82030
-ZONE;USDCHF;0.82130;0.82200
 BIAS;USDCAD;short
-ZONE;USDCAD;1.39980;1.40070
-ZONE;USDCAD;1.40110;1.40200
+ZONE;USDCAD;1.39700;1.39760
+ZONE;USDCAD;1.39930;1.40050
 BIAS;AUDUSD;none
 BIAS;NZDUSD;none
