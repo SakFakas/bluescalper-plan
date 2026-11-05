@@ -1,32 +1,30 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-11-04 (szerda) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 10:00 körüli (frissítő) futás: London vége előtt és a NY ülésre, a teljes fájl újraírva. Szerda, péntek-korlát nincs.
-# Adat: a data/*.csv META utc=2026.11.04 09:38 (AUDUSD, NZDUSD, USDJPY, USDCHF, USDCAD, ~20 perces), de EURUSD és GBPUSD META utc=08:38, vagyis ezek ~1,5 órásak (elavultabbak, óvatos zónák). Bid: EURUSD 1.12441, GBPUSD 1.34802, USDJPY 158.296, USDCHF 0.81615, USDCAD 1.39499, AUDUSD 0.70082, NZDUSD 0.56343. Szerver-UTC eltérés 7143-7144 s (UTC+2, téli idő, konzisztens). ATR14 (D1) kb.: EURUSD 0.0060, GBPUSD 0.0067, USDCHF 0.0055, USDCAD 0.0057.
-# Kép: az amerikai félidős választás után (Demokraták átvették a Kongresszust) a dollár szélesen gyengült (USDIDX kb. -0.4%, 10 éves hozam ~4.90%). EURUSD pattanás Ázsia/London-csúcsig 1.1263 -> short a csúcs körül: 1.1258-1.1265, ill. 1.1276-1.1287. GBPUSD új napi csúcs 1.3486 -> long csak visszahúzódásnál támaszon: 1.3448-1.3456 (London-délelőtti mélypontok), mélyebben 1.3426-1.3434. USDCHF 0.8131 mélypont után 0.8179-ig pattant vissza -> short ellenállásnál: 0.8173-0.8179 (London-csúcs), ill. 0.8195-0.8203. USDCAD ellenállás 1.3970-1.3976 (London-csúcs), ill. 1.3993-1.4005 -> short. USDJPY 157.4-ről 158.3-ra visszapattant, intervenciós kockázat és nagy kilengés -> none. AUDUSD 0.6955-ről 0.7009-ig pattant, NZDUSD 0.5581-ről 0.5634-ig, de nincs tiszta belépési szint -> none.
-# USD-irány: GBPUSD long, USDCHF short és USDCAD short = USD short (3 pár), EURUSD short = USD long (fade). Az EA max. 2 azonos USD-irányú trade-et enged, így nem kell kézzel szűrni.
-# Hírek (UTC, XTB naptár): 10:00 EZ előzetes HICP infláció (EUR, London-ülésen belül), 13:15 US ADP, 13:30 US külkereskedelmi mérleg + CAD külkereskedelmi mérleg, 15:00 ISM szolgáltatás, 15:30 EIA olajkészlet (CAD). Fed-kamatdöntés és -beszéd nem szerepel a naptárban. Riksbank 08:30 (nem kereskedett pár).
-# Csütörtökön 12:00 BoE, pénteken 13:30 NFP.
+# Terv a 2026-11-05 (csütörtök) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 06:00 körüli (05:59 UTC) futás: elsősorban a London ülésre, de mindkét ülésre érvényes zónákkal. Csütörtök, péntek-korlát nincs.
+# Adat: a data/*.csv META utc=2026.11.05 05:38 (mind a 7 pár, friss, ~20 perces). Bid: EURUSD 1.12575, GBPUSD 1.34904, USDJPY 157.907, USDCHF 0.81425, USDCAD 1.39508, AUDUSD 0.70111, NZDUSD 0.56431. Szerver-UTC eltérés 7141 s (UTC+2, téli idő, konzisztens). ATR14 (D1) kb.: EURUSD 0.0060, GBPUSD 0.0067, USDCHF 0.0055, USDCAD 0.0058.
+# Kép: a dollár tegnap és Ázsiában tovább gyengült (D1: EURUSD 5 napja 1.1153-ról 1.1229-re, GBPUSD 1.3324-ről 1.3472-re, USDCHF 0.8282-ről 0.8171-re, USDCAD 1.3998-ról 1.3977-re). Mind trendkövető, visszahúzódásnál belépő setup. EURUSD long támaszon: 1.1233-1.1240 (Ázsia-mélypont 1.12339), mélyebben 1.1220-1.1227 (tegnapi H4 mélypont 1.12129 felett). GBPUSD long: 1.3470-1.3478 (Ázsia-mélypont 1.34758), mélyebben 1.3454-1.3464 (tegnapi mélypont 1.34545). USDCHF short ellenállásnál: 0.8160-0.8166 (Ázsia-csúcs 0.81657), ill. 0.8178-0.8186 (tegnapi csúcs 0.81858). USDCAD short: 1.3965-1.3976 (Ázsia-csúcs 1.39725, tegnapi csúcs 1.39761), ill. 1.3993-1.4001. USDJPY: intervenciós kockázat, nagy kilengés (tegnap 157.4-158.77) -> none. AUDUSD és NZDUSD: tartomány, nincs tiszta belépési szint -> none.
+# USD-irány: EURUSD long, GBPUSD long, USDCHF short, USDCAD short = mind USD short (4 pár). Az EA max. 2 azonos USD-irányú trade-et enged, így nem kell kézzel szűrni.
+# Hírek (UTC): 12:00 BoE kamatdöntés + Monetary Policy Report (GBP, a London ülés legvége) -> GBP blackout 11:45-12:30; 13:30 US heti munkanélküli segély + Productivity and Costs (USD, NY nyitás) -> USD blackout 13:20-13:45. Fed-beszéd/más nagy esemény nem találtam megerősítve; 15:30 EIA olajkészlet (CAD) szerdai, ma nincs. Pénteken 13:30 NFP.
+# Frissítés a 10:00 körüli (09:59 UTC) futásnál: BoE előtti pozicionálás és a NY ülés zónái.
 
-GENERATED;2026.11.04 10:01
-VALID_UNTIL;2026.11.04 17:15
+GENERATED;2026.11.05 06:03
+VALID_UNTIL;2026.11.05 17:15
 ENABLED;1
 
-BLACKOUT;2026.11.04 09:55;2026.11.04 10:05;EUR
-BLACKOUT;2026.11.04 13:10;2026.11.04 13:35;USD
-BLACKOUT;2026.11.04 14:55;2026.11.04 15:40;USD
-BLACKOUT;2026.11.04 15:25;2026.11.04 15:35;CAD
+BLACKOUT;2026.11.05 11:45;2026.11.05 12:30;GBP
+BLACKOUT;2026.11.05 13:20;2026.11.05 13:45;USD
 
-BIAS;EURUSD;short
-ZONE;EURUSD;1.12580;1.12650
-ZONE;EURUSD;1.12760;1.12870
+BIAS;EURUSD;long
+ZONE;EURUSD;1.12330;1.12400
+ZONE;EURUSD;1.12200;1.12270
 BIAS;GBPUSD;long
-ZONE;GBPUSD;1.34480;1.34560
-ZONE;GBPUSD;1.34260;1.34340
+ZONE;GBPUSD;1.34700;1.34780
+ZONE;GBPUSD;1.34540;1.34640
 BIAS;USDJPY;none
 BIAS;USDCHF;short
-ZONE;USDCHF;0.81730;0.81790
-ZONE;USDCHF;0.81950;0.82030
+ZONE;USDCHF;0.81600;0.81660
+ZONE;USDCHF;0.81780;0.81860
 BIAS;USDCAD;short
-ZONE;USDCAD;1.39700;1.39760
-ZONE;USDCAD;1.39930;1.40050
+ZONE;USDCAD;1.39650;1.39760
+ZONE;USDCAD;1.39930;1.40010
 BIAS;AUDUSD;none
 BIAS;NZDUSD;none
