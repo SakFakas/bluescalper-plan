@@ -1,12 +1,13 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-11-06 (péntek) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 06:00 körüli (05:59 UTC) napi terv, elsősorban a London ülésre, mindkét ülésre érvényes zónákkal. PÉNTEK: 15:00 UTC után az EA nem nyit új trade-et (EA input), a zónák ezért főleg a 08:00-15:00 közti időre szólnak.
-# Adat: a data/*.csv META utc=2026.11.06 05:38 (mind a 7 pár, friss, ~20 perces). Bid: EURUSD 1.11969, GBPUSD 1.34246, USDJPY 157.826, USDCHF 0.81657, USDCAD 1.40455, AUDUSD 0.68881, NZDUSD 0.55579. Szerver-UTC eltérés ~7199 s (UTC+2, téli idő, konzisztens). ATR14 (D1) kb.: EURUSD 0.0060, GBPUSD 0.0063, USDCHF 0.0054, USDCAD 0.0060, AUDUSD 0.0046, NZDUSD 0.0046.
-# Kép: tegnap este/éjjel a dollár visszaerősödött: EURUSD (1.1197) és GBPUSD (1.3425) elvesztette a tegnapi mélypontokat, így a tegnapi USD short terv érvénytelen; AUDUSD (0.6888) és NZDUSD (0.5558) a 20 napos mélypont alá tört, USDCAD (1.4045) a tegnapi csúcs (1.40236) fölé emelkedett. Ma NFP-nap: csak a tiszta, dollárerősödést követő setupok maradnak, visszahúzódásnál belépve. EURUSD/GBPUSD: a D1 szerkezet vegyes, a mélypontok alatt nincs támasz-oldali setup, ellenállás-oldali short viszont a D1 emelkedő trend ellen menne -> none. USDCHF: 0.8166 a tegnapi 0.8133-0.8185 sáv közepén -> none. USDJPY: intervenciós kockázat, 157.8 a 158.5 csúcs közelében -> none.
-# Zónák: USDCAD long: 1.4010-1.4025 (mai H1 mélypont 1.40108, tegnapi csúcs 1.40236 mint támasz), mélyebben 1.3992-1.4002 (tegnapi 20:00 H4 nyitás körüli szint). AUDUSD short: 0.6925-0.6942 (mai csúcs 0.69421, a tegnapi leszakadás szintje 0.69242), ill. 0.6955-0.6967. NZDUSD short: 0.5590-0.5600 (mai H1 csúcs 0.55979), ill. 0.5612-0.5625 (tegnapi 20:00 H4 nyitás 0.56127).
-# USD-irány: USDCAD long, AUDUSD short, NZDUSD short = mind USD long (3 pár). Az EA max. 2 azonos USD-irányú trade-et enged, így nem kell kézzel szűrni. Az AUD/NZD pároknál az ár már 35-50 pontra van az első zónától; ha nem ér vissza, nincs trade.
-# Hírek (UTC): 13:30 US NFP (októberi munkaerőpiaci jelentés; előző: +29k, munkanélküliség 4.2%, megerősített időpont) + valószínűleg 13:30 kanadai munkaerő-felmérés (CAD; időpont nem megerősítve, ezért óvatosan blackout) -> USD blackout 13:15-13:50, CAD blackout 13:15-13:50. London ülésen belül nincs megerősített nagy hatású esemény; Fed-beszédek idejét nem sikerült megerősíteni.
+# Terv a 2026-11-06 (péntek) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 10:00 körüli (09:59 UTC) frissítés: teljes fájl újraírva a London vége előtt és a NY ülésre. PÉNTEK: 15:00 UTC után az EA nem nyit új trade-et (EA input), a zónák főleg a 10:00-15:00 közti időre szólnak.
+# Adat: a data/*.csv META utc=2026.11.06 09:38 (mind a 7 pár, friss, ~20 perces). Bid: EURUSD 1.11729, GBPUSD 1.33885, USDJPY 158.295, USDCHF 0.81796, USDCAD 1.40737, AUDUSD 0.68763, NZDUSD 0.55456. Szerver-UTC eltérés 7200 s (UTC+2, téli idő, konzisztens).
+# Kép: a dollár egész reggel tovább erősödött (a 06:00-s tervhez képest): USDCAD 1.4045 -> 1.4074 (új napi csúcs körül, lépcsőzetes emelkedés), AUDUSD 0.6888 -> 0.6876 (mai mélypont 0.6862), NZDUSD 0.5558 -> 0.5546 (mai mélypont 0.55443, frissen újabb 20 napos mélypont), EURUSD 1.1197 -> 1.1173 és GBPUSD 1.3425 -> 1.3389 (mindkettő erős lefelé tartó nap). Ma NFP-nap: csak a trendkövető, visszahúzódásnál belépő setupok maradnak.
+# Zónák: USDCAD long (támasz, visszahúzódás): 1.4045-1.4060 (08:00-09:00 UTC konszolidáció teteje), 1.4030-1.4040 (a reggeli kitörés szintje), mélyebben 1.4010-1.4025 (tegnapi csúcs 1.40236). AUDUSD short (ellenállás): 0.6888-0.6904 (mai 07:00 UTC csúcs 0.69037, a leszakadás szintje), 0.6915-0.6930 (04:00 UTC leszakadás eleje). NZDUSD short (ellenállás): 0.5558-0.5567 (mai 07:00-08:00 UTC csúcsok 0.5565), 0.5579-0.5590 (a 03:00 UTC leszakadás szintje).
+# EURUSD/GBPUSD: erős lefelé mozgás, de a D1 szerkezet vegyes és a tegnapi csúcsoktól 80-100 pontra vagyunk; az ellenállás-oldali visszahúzás nem tiszta -> none. USDCHF: 0.8180 a 0.8185 napi/heti sáv tetején -> none. USDJPY: 158.3, 158.77 csúcs közelében, intervenciós kockázat -> none.
+# USD-irány: USDCAD long, AUDUSD short, NZDUSD short = mind USD long (3 pár). Az EA max. 2 azonos USD-irányú trade-et enged, így nem kell kézzel szűrni. AUD/NZD: az ár 12-25 pontra van az első zónától; ha nem ér vissza, nincs trade.
+# Hírek (UTC): 13:30 US NFP (októberi munkaerőpiaci jelentés, megerősített időpont) + 13:30 kanadai munkaerő-felmérés (CAD; időpont nem teljesen megerősítve, ezért óvatosan blackout) -> USD és CAD blackout 13:15-13:50. London ülésen belül nincs megerősített nagy hatású esemény; Fed-beszédek idejét nem sikerült megerősíteni (a webes keresés ma nem adott használható részletet).
 
-GENERATED;2026.11.06 06:00
+GENERATED;2026.11.06 09:59
 VALID_UNTIL;2026.11.06 17:15
 ENABLED;1
 
@@ -18,11 +19,12 @@ BIAS;GBPUSD;none
 BIAS;USDJPY;none
 BIAS;USDCHF;none
 BIAS;USDCAD;long
+ZONE;USDCAD;1.40450;1.40600
+ZONE;USDCAD;1.40300;1.40400
 ZONE;USDCAD;1.40100;1.40250
-ZONE;USDCAD;1.39920;1.40020
 BIAS;AUDUSD;short
-ZONE;AUDUSD;0.69250;0.69420
-ZONE;AUDUSD;0.69550;0.69670
+ZONE;AUDUSD;0.68880;0.69040
+ZONE;AUDUSD;0.69150;0.69300
 BIAS;NZDUSD;short
-ZONE;NZDUSD;0.55900;0.56000
-ZONE;NZDUSD;0.56120;0.56250
+ZONE;NZDUSD;0.55580;0.55670
+ZONE;NZDUSD;0.55790;0.55900
