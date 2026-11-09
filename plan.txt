@@ -1,12 +1,12 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-11-09 (hétfő) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 06:00 körüli (05:59 UTC) napi terv, mindkét ülésre érvényes zónákkal.
-# Adat: a data/*.csv META utc=2026.11.09 05:23-05:24 (mind a 7 pár, friss, ~35 perces). Szerver-UTC eltérés 7199 s (UTC+2, téli idő, konzisztens). Bid: EURUSD 1.11570, GBPUSD 1.33779, USDJPY 158.264, USDCHF 0.82017, USDCAD 1.41029, AUDUSD 0.68901, NZDUSD 0.55917.
-# Kép: pénteki NFP-s dollárerősödés után hétfő nyitáskor részleges visszapattanás (hétvégi gap: EURUSD 1.1136->1.1157, AUDUSD 0.6863->0.6890, NZDUSD 0.5539->0.5592, USDCAD 1.4130->1.4103). A D1 trend továbbra is USD-erős (USDCAD kitörés 1.40 fölé, AUD/NZD/EUR/GBP új mélypontok pénteken). Holnap (kedd) 13:30 UTC US CPI: hétfőn visszafogott, CPI előtti pozicionálás várható.
-# Pár / ár / D1 ATR14 / közeli zóna távolsága: USDCAD 1.41029 / 0.00643 / zóna felső széle 1.40800 = 0.00229 = 0.36 ATR (alsó 1.40600 = 0.67 ATR). EURUSD 1.11570 / 0.00637 / none. GBPUSD 1.33779 / 0.00686 / none. USDJPY 158.264 / 0.918 / none. USDCHF 0.82017 / 0.00565 / none. AUDUSD 0.68901 / 0.00490 / none. NZDUSD 0.55917 / 0.00487 / none.
-# USDCAD long a legerősebb setup (pénteki kitörés 1.4008->1.4137, a 08:00-12:00 UTC lépcsők 1.4079/1.4107 szintje visszahúzásnál támasz; mély zóna: csütörtöki csúcs/pénteki nyitás 1.4015-1.4030). Az EA max. 1 azonos USD-irányú trade-et enged, ezért a többi USD-s pár none: AUD/NZD short a hétvégi gap-visszatöltés miatt még nem tiszta (közeli ellenállás-zóna sem megbízható), EUR/GBP short a pénteki zuhanás után a nap elején a gap felfelé zárása miatt gyenge, USDCHF a heti sáv tetején, USDJPY 158+ intervenciós kockázat.
-# Hírek (UTC): a mai napra nincs megerősített nagy hatású esemény (a naptár 0 eseményt mutat hétfőre; Fed/ECB/BoE-beszédek időpontját nem sikerült megerősíteni) -> nincs BLACKOUT. Kedd 13:30 US CPI már a holnapi terv dolga.
+# Terv a 2026-11-09 (hétfő) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 10:00 körüli (09:59 UTC) frissítés: teljes fájl újraírva, a London vége előtt, a NY ülésre.
+# Adat: a data/*.csv META utc=2026.11.09 09:23-09:24 (mind a 7 pár, friss, ~35 perces). Szerver-UTC eltérés 7199-7200 s (UTC+2, téli idő, konzisztens). Bid: EURUSD 1.11866, GBPUSD 1.34104, USDJPY 157.962, USDCHF 0.81839, USDCAD 1.40818, AUDUSD 0.68978, NZDUSD 0.56016.
+# Kép: a reggeli órákban a dollár tovább gyengült a pénteki NFP-s zuhanás után (EURUSD 1.1157->1.1187, GBPUSD 1.3378->1.3410, USDCAD 1.4103->1.4082, napi csúcs/mélypont USDCAD 1.41282/1.40818). A D1 trend még USD-erős (USDCAD pénteki kitörés 1.4008->1.4137), de a hétfői visszahúzás USDCAD-ben belépési zónát közelít. Kedden 13:30 UTC US CPI: NY ülésen CPI előtti pozicionálás, csendesebb forgalom várható.
+# Pár / ár / D1 ATR14 / közeli zóna távolsága: USDCAD 1.40818 / 0.00643 / zóna felső széle 1.40600 = 0.00218 = 0.34 ATR (alsó 1.40400 = 0.65 ATR); mély zóna felső széle 1.40250 = 0.88 ATR. EURUSD 1.11866 / 0.00637 / none. GBPUSD 1.34104 / 0.00686 / none. USDJPY 157.962 / 0.918 / none. USDCHF 0.81839 / 0.00565 / none. AUDUSD 0.68978 / 0.00490 / none. NZDUSD 0.56016 / 0.00487 / none.
+# USDCAD long a legerősebb setup (D1 kitörés 1.40 fölé, visszahúzás a pénteki lépcsők felé; támasz: 1.4040-1.4060 közeli, 1.4010-1.4025 csütörtöki zárás/pénteki nyitás). Az EA max. 1 azonos USD-irányú trade-et enged, ezért a többi USD-s pár none: EUR/GBP/AUD/NZD short a gyengülő dollár ellen, a gap-visszatöltés közben nem tiszta (és az USD-long irányt USDCAD már lefoglalja), USDCHF közepes sávban, USDJPY 158 körül intervenciós kockázat.
+# Hírek (UTC): a mai napra nem sikerült megerősíteni nagy hatású eseményt (a keresés nem hozott megbízható naptári tételt; Fed/ECB/BoE-beszédek időpontja nem megerősített) -> nincs BLACKOUT. Kedd 13:30 US CPI már a holnapi terv dolga.
 
-GENERATED;2026.11.09 05:59
+GENERATED;2026.11.09 09:59
 VALID_UNTIL;2026.11.09 17:15
 ENABLED;1
 
@@ -15,7 +15,7 @@ BIAS;GBPUSD;none
 BIAS;USDJPY;none
 BIAS;USDCHF;none
 BIAS;USDCAD;long
-ZONE;USDCAD;1.40600;1.40800
-ZONE;USDCAD;1.40150;1.40300
+ZONE;USDCAD;1.40400;1.40600
+ZONE;USDCAD;1.40100;1.40250
 BIAS;AUDUSD;none
 BIAS;NZDUSD;none
