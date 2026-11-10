@@ -1,24 +1,25 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-11-10 (kedd) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a reggeli (05:59 UTC) napi terv: elsősorban a London ülésre, de mindkét ülésre érvényes zónákkal.
-# Adat: a data/*.csv META utc=2026.11.10 05:23-05:24 (mind a 7 pár, friss, ~40 perces). Szerver-UTC eltérés 7199 s (UTC+2, téli idő, konzisztens). Bid: EURUSD 1.12281, GBPUSD 1.34484, USDJPY 157.949, USDCHF 0.81919, USDCAD 1.41173, AUDUSD 0.69239, NZDUSD 0.56385.
-# Kép: hétfőn a dollár tovább gyengült (EURUSD 1.1136->1.1223, GBPUSD 1.3347->1.3443, AUDUSD 0.6863->0.6926, NZDUSD 0.5539->0.5630), az USD-gyengülő párok M5 RSI-je túlvett (EURUSD ~75, GBPUSD ~69, AUDUSD ~78, NZDUSD ~82), így short belépés most úgysem lenne engedett, long az USD ellen pedig nem kívánt. USDCAD a pénteki kitörés (1.4008->1.4130) után 1.4117 körül konszolidál, M5 RSI ~44.
-# Pár / ár / D1 ATR14 / közeli zóna távolsága: USDCAD 1.41173 / 0.00630 / zóna felső széle 1.40850 = 0.00323 = 0.51 ATR (alsó 1.40600 = 0.91 ATR); mély zóna felső széle 1.40250 = 1.47 ATR (alsó 1.40080 = 1.7 ATR). EURUSD 1.12281 / 0.00660 / none. GBPUSD 1.34484 / 0.00675 / none. USDJPY 157.949 / 0.924 / none. USDCHF 0.81919 / 0.00569 / none. AUDUSD 0.69239 / 0.00510 / none. NZDUSD 0.56385 / 0.00525 / none.
-# USDCAD long a legerősebb (és egyetlen) setup: D1 kitörés 1.40 fölé, támasz: 1.4060-1.4085 (hétfői mélypont 1.40774 környéke), mély zóna 1.4008-1.4025 (pénteki nyitás/H4 mélypont 1.40203). Az EA max. 1 azonos USD-irányú trade-et enged, ezért a többi USD-s pár none: EUR/GBP/AUD/NZD short az USD-long irányt USDCAD-vel ütközne és az RSI is túlvett, long az USD ellen ellentétes a D1 USD-trenddel; USDCHF oldalazó; USDJPY 158 körül intervenciós kockázat.
-# Hírek (UTC): ma 13:30 US CPI (okt., több naptár egyezően) -> BLACKOUT USD 13:20-13:50 (az EA +-10 percet ad hozzá, így 13:10-14:00 tiltás). A London ülésre nem találtam megerősített nagy hatású EUR/GBP eseményt; a központi banki beszédek időpontja nem megerősített. A CPI után a NY ülés második fele (14:00-17:00) kereskedhető.
-# Megjegyzés: a CPI előtti 13:00-13:10 sáv is volatilis lehet; a zónák távolsága miatt érdemi belépés inkább London alatt vagy CPI után várható.
+# Terv a 2026-11-10 (kedd) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 10:00 körüli frissítő terv: London vége előtt és a NY ülésre; teljes fájl újraírva.
+# Adat: a data/*.csv META utc=2026.11.10 09:23-09:24 (mind a 7 pár, friss, ~35 perces). Szerver-UTC eltérés 7199 s (UTC+2, téli idő, konzisztens). Bid: EURUSD 1.12337, GBPUSD 1.34363, USDJPY 158.048, USDCHF 0.81981, USDCAD 1.41264, AUDUSD 0.69148, NZDUSD 0.56366.
+# Kép: a hétfői USD-gyengülés után ma reggel az USD-gyengülő párok M5 RSI-je visszaesett (GBPUSD ~27 túladott, AUDUSD ~35, NZDUSD ~34, EURUSD ~39), USDCAD M5 RSI ~68 (túlvett, a long belépéshez 35-60 kell, ezért a belépés visszahúzódásra vár), USDCHF ~67, USDJPY ~60.
+# Pár / ár / D1 ATR14 / közeli zóna távolsága: USDCAD 1.41264 / 0.00630 / zóna felső széle 1.41000 = 0.00264 = 0.42 ATR (alsó 1.40750 = 0.82 ATR); mély zóna 1.40250 = 1.61 ATR (alsó 1.40080 = 1.88 ATR). EURUSD 1.12337 / 0.00660 / zóna felső széle 1.12130 = 0.00207 = 0.31 ATR (alsó 1.12000 = 0.51 ATR); mély zóna 1.11850 = 0.74 ATR (alsó 1.11700 = 0.97 ATR). GBPUSD 1.34363 / 0.00675 / none. USDJPY 158.048 / 0.924 / none. USDCHF 0.81981 / 0.00569 / none. AUDUSD 0.69148 / 0.00510 / none. NZDUSD 0.56366 / 0.00525 / none.
+# Legerősebb setup: USDCAD long (D1 kitörés 1.40 fölé, támasz: hétfői mélypont 1.40774 és a H4 1.4044 környéke; mély zóna a pénteki nyitás 1.4008-1.4025). Másodlagos, ellentétes dollárirányú setup: EURUSD long (USD-short), támasz az ázsiai mélypont 1.12044 körül; ez a USDCAD long dollárirányával nem ütközik az 1 trade/irány szabályba. A többi pár none: GBPUSD túladott (long nem engedett), AUD/NZD gyenge momentum, USDCHF túlvett, USDJPY ~158 intervenciós kockázat.
+# Hírek (UTC): ma 13:30 US CPI (okt., több forrás egyezően) -> BLACKOUT USD 13:20-13:50 (az EA +-10 percet ad hozzá, így 13:10-14:00 tiltás). A London ülésre nem találtam megerősített nagy hatású EUR/GBP eseményt; a Fed-beszédek időpontja nem megerősített. A CPI után a NY ülés második fele (14:00-17:00) kereskedhető.
 
-GENERATED;2026.11.10 06:05
+GENERATED;2026.11.10 10:00
 VALID_UNTIL;2026.11.10 17:15
 ENABLED;1
 
 BLACKOUT;2026.11.10 13:20;2026.11.10 13:50;USD
 
-BIAS;EURUSD;none
+BIAS;EURUSD;long
+ZONE;EURUSD;1.12000;1.12130
+ZONE;EURUSD;1.11700;1.11850
 BIAS;GBPUSD;none
 BIAS;USDJPY;none
 BIAS;USDCHF;none
 BIAS;USDCAD;long
-ZONE;USDCAD;1.40600;1.40850
+ZONE;USDCAD;1.40750;1.41000
 ZONE;USDCAD;1.40080;1.40250
 BIAS;AUDUSD;none
 BIAS;NZDUSD;none
