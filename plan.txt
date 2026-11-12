@@ -1,12 +1,12 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-11-12 (csütörtök) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 06:00 körüli napi terv: elsősorban a London ülésre, de mindkét ülésre érvényes zónákkal; teljes fájl újraírva.
-# Adat: a data/*.csv META utc=2026.11.12 05:23-05:24 (mind a 7 pár, friss, ~35 perces). Szerver-UTC eltérés 7199 s (UTC+2, téli idő, konzisztens). Bid: EURUSD 1.10791, GBPUSD 1.32611, USDJPY 159.696, USDCHF 0.83271, USDCAD 1.42566, AUDUSD 0.68357, NZDUSD 0.55533.
-# Kép: a dollár tovább erősödik (tegnapi D1: EURUSD új mélypont 1.10826, USDCAD zárás 1.42519 a csúcs közelében, USDCHF 0.8330, USDJPY 159.8). M5/H1/H4 RSI: EURUSD 53/28/31, GBPUSD 52/27/29, AUDUSD 33/36/33, NZDUSD 35/29/38 (H1 erősen túladott, short csak visszapattanásra), USDCAD 47/77/81 (H4 túlvett, long csak visszahúzásra), USDCHF 43/71/72, USDJPY 51/66/69.
-# Pár / ár / D1 ATR14 / közeli zóna távolsága: USDCAD 1.42566 / 0.00694 / zóna felső széle 1.42280 = 0.00286 = 0.41 ATR (alsó 1.42150 = 0.60 ATR); második zóna 1.41950-1.42060 = 0.74-0.89 ATR. EURUSD 1.10791 / 0.00731 / zóna alsó széle 1.11020 = 0.00229 = 0.31 ATR (felső 1.11130 = 0.46 ATR); második zóna 1.11300-1.11460 = 0.70-0.91 ATR. GBPUSD 1.32611 / 0.0077 / none. USDJPY 159.696 / 0.934 / none. USDCHF 0.83271 / 0.00643 / none. AUDUSD 0.68357 / 0.00542 / none. NZDUSD 0.55533 / 0.00554 / none.
-# Legerősebb setup: USDCAD long (D1 3 napja feljebb, H4 trend erős; támasz: tegnapi H4 mélypont 1.4215 és a korábbi ellenállás 1.4222 környéke, mélyebben a nov. 10-i csúcs/H4 mélypont 1.4195-1.4206). Másodlagos: EURUSD short (D1/H4 lefelé, új mélypont; ellenállás: mai ázsiai csúcs 1.1100 és a tegnapi H4 nyitó/záró 1.1105 környéke, feljebb 1.1130-1.1146 a tegnapi H4 zárás/nov. 10-i mélypont). Mindkettő dollár-long, az EA csak az elsőként kiváltódót nyitja (MaxSameUsdDirection=1). GBPUSD/AUDUSD/NZDUSD azonos dollárirány és túladott, USDCHF H1/H4 túlvett, USDJPY ~159.7 intervenciós kockázat: mind none.
-# Hírek (UTC): 07:00 UK Q3 GDP/ipari termelés (a London ülés előtt, ezért nincs blackout, de a London nyitás körül GBP-volatilitás várható). 13:30 USA heti munkanélküli segély (jobless claims), 17:00 EIA olajkészlet (ma szerdáról áthelyezve a Veterans Day miatt; CAD) - ezekre BLACKOUT. Lagarde/Bailey beszédek időpontja nem megerősített, ezért ezekre nincs BLACKOUT. USA PPI csak holnap.
+# Terv a 2026-11-12 (csütörtök) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 10:00 körüli frissítés: a London vége előtt és a NY ülésre; teljes fájl újraírva.
+# Adat: a data/*.csv META utc=2026.11.12 09:23-09:24 (mind a 7 pár, friss, ~40 perces). Szerver-UTC eltérés 7199-7200 s (UTC+2, téli idő, konzisztens). Bid: EURUSD 1.10914, GBPUSD 1.32704, USDJPY 159.689, USDCHF 0.83206, USDCAD 1.42524, AUDUSD 0.68250, NZDUSD 0.55587.
+# Kép: a dollár erős marad (tegnapi D1: EURUSD új mélypont 1.10826, USDCAD zárás 1.42519 a csúcson, USDCHF 0.8330, USDJPY 159.80). Mai ázsiai/London nyitás: EURUSD csúcs 1.11004 / mélypont 1.10663, USDCAD csúcs 1.42650 / mélypont 1.42413; London nyitás óta szűk range. RSI M5/H1/H4: EURUSD 60/43/29, GBPUSD 54/39/27, AUDUSD 49/27/31, NZDUSD 62/32/36 (túladott), USDCAD 49/66/82 (H4 erősen túlvett, long csak visszahúzásra), USDCHF 51/58/73, USDJPY 46/58/70.
+# Pár / ár / D1 ATR14 / közeli zóna távolsága: USDCAD 1.42524 / 0.00694 / zóna felső széle 1.42300 = 0.00224 = 0.32 ATR (alsó 1.42180 = 0.50 ATR); második zóna 1.42000-1.42080 = 0.64-0.76 ATR. EURUSD 1.10914 / 0.00731 / zóna alsó széle 1.11130 = 0.00216 = 0.30 ATR (felső 1.11260 = 0.47 ATR); második zóna 1.11420-1.11540 = 0.69-0.86 ATR. GBPUSD 1.32704 / 0.0077 / none. USDJPY 159.689 / 0.934 / none. USDCHF 0.83206 / 0.00643 / none. AUDUSD 0.68250 / 0.00542 / none. NZDUSD 0.55587 / 0.00554 / none.
+# Legerősebb setup: USDCAD long (D1 négy napja feljebb, H4 trend erős; támasz: napi pivot 1.4227 és tegnapi H4 mélypont/nyitó 1.4218-1.4230; mélyebben S1 1.4203 és a tegnapi H4 1.4202 mélypont). Másodlagos: EURUSD short (D1/H4 lefelé, új mélypont; ellenállás: napi pivot 1.1114 és a mai ázsiai csúcs 1.1100 fölötti sáv 1.1113-1.1126; feljebb R1 1.1145 és a tegnapi H4 törés 1.1142-1.1154). Mindkettő dollár-long, az EA csak az elsőként kiváltódót nyitja (MaxSameUsdDirection=1). GBPUSD/AUDUSD/NZDUSD azonos dollárirány és túladott (H4/H1), USDCHF H4 túlvett, USDJPY ~159.7 intervenciós kockázat: mind none.
+# Hírek (UTC): 07:00 UK Q3 GDP (lefutott, nincs blackout). 13:30 USA heti munkanélküli segély (jobless claims) és 17:00 EIA olajkészlet (a Veterans Day miatt szerdáról csütörtökre tolva, 12:00 ET; CAD) - ezekre BLACKOUT. 15:00 USA lakáseladások (alacsony hatás), nincs blackout. Fed/ECB/BoE beszédek időpontja nem megerősített, ezekre nincs BLACKOUT. FOMC-jegyzőkönyv jövő szerdán, PPI holnap.
 
-GENERATED;2026.11.12 06:02
+GENERATED;2026.11.12 10:05
 VALID_UNTIL;2026.11.12 17:15
 ENABLED;1
 
@@ -14,13 +14,13 @@ BLACKOUT;2026.11.12 13:15;2026.11.12 13:45;USD
 BLACKOUT;2026.11.12 16:45;2026.11.12 17:15;CAD
 
 BIAS;EURUSD;short
-ZONE;EURUSD;1.11020;1.11130
-ZONE;EURUSD;1.11300;1.11460
+ZONE;EURUSD;1.11130;1.11260
+ZONE;EURUSD;1.11420;1.11540
 BIAS;GBPUSD;none
 BIAS;USDJPY;none
 BIAS;USDCHF;none
 BIAS;USDCAD;long
-ZONE;USDCAD;1.42150;1.42280
-ZONE;USDCAD;1.41950;1.42060
+ZONE;USDCAD;1.42180;1.42300
+ZONE;USDCAD;1.42000;1.42080
 BIAS;AUDUSD;none
 BIAS;NZDUSD;none
