@@ -1,14 +1,14 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
-# Terv a 2026-11-16 (hétfő) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 06:00 körüli (05:59 UTC) napi terv, teljes fájl, mindkét ülésre érvényes zónákkal.
-# Adat: data/*.csv META utc=2026.11.16 05:02-05:03, vagyis ~1 óra, friss. server_minus_utc_sec=7199-7200 (téli UTC+2, rendben).
-# Háttér: erős dollár-trend (D1/H4): EURUSD, GBPUSD, AUDUSD, NZDUSD lefelé (H4 SMA20<SMA50, H1 RSI 29-37, túladott, short belépéshez RSI 40-65 kell, ezért ezek none), USDCHF és USDCAD felfelé. MaxSameUsdDirection=1: csak EGY dollár-long setup kap irányt.
-# Legerősebb setup: USDCHF long (H4 SMA20 0.83335 > SMA50 0.82440, 10 napos csúcs közelében, H1 RSI 60, visszahúzódásra támasz-zónák). USDCAD: H1 RSI 62 és 13:30 Kanada CPI + a 1.4274 körüli 10 napos csúcs, gyengébb, none. USDJPY: 159.6, ~160 intervenciós kockázat, none.
-# Közeli zóna ATR-számítás (D1 ATR14): USDCHF ár 0.83912 (ask 0.83926), ATR 0.00633; zóna 1 felső széle 0.83690 = 0.00222 távolság = 0.35 ATR, alsó széle 0.83560 = 0.56 ATR; zóna 2 felső széle 0.83520 = 0.62 ATR; zóna 3 0.83350 = 0.88 ATR, alsó 0.83250 = 1.05 ATR. Szint-források: 11.12 zárás 0.83529, 11.13 mélypont 0.83449, H4 SMA20 0.83335, 11.11 zárás 0.83303.
-# Többi pár (ár / ATR): EURUSD 1.10173 / 0.00741, GBPUSD 1.32060 / 0.00771, USDJPY 159.583 / 0.886, USDCAD 1.42783 / 0.00684, AUDUSD 0.67586 / 0.00573, NZDUSD 0.55201 / 0.00548: mind none, ezért közeli zóna nem kell.
-# Hírek (UTC): 10:00 Eurozone ipari termelés (közepes, nincs blackout); 13:30 Kanada CPI (nagy, CAD) és Empire State index (USD, közepes); 14:05 Fed Williams beszéd (közepes); 17:00 Fed elnök Warsh beszéd (nagy, a NY ülés végén). Forrás egyetlen naptár (thriveinmarkets), a Warsh-időpont nem ellenőrzött másodszor.
+# Terv a 2026-11-16 (hétfő) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 10:00 körüli (10:00 UTC) frissítés, teljes fájl, a London vége előtt és a NY ülésre.
+# Adat: data/*.csv META utc=2026.11.16 09:02-09:03, vagyis ~1 óra, friss. server_minus_utc_sec=7198-7199 (téli UTC+2, rendben).
+# Háttér: erős dollár-trend (D1/H4): EURUSD, GBPUSD, AUDUSD, NZDUSD lefelé (H4 SMA20<SMA50), USDCHF és USDCAD felfelé. MaxSameUsdDirection=1: csak EGY dollár-long setup kap irányt (az EUR/GBP/AUD/NZD short is dollár-long), ezért a többi none.
+# Legerősebb setup: USDCHF long (H4 SMA20 0.83401 > SMA50 0.82476, 10 napos csúcs 0.83966 közelében, H1 RSI 47, M15 RSI 61: a visszahúzódás a támasz-zónákra vár). USDCAD: H1 RSI 64 (long belépéshez 35-60 kell) + 13:30 Kanada CPI, none. EURUSD/GBPUSD/AUDUSD/NZDUSD: dollár-irány foglalt, gyengébb setup, none. USDJPY: 159.4, ~160 intervenciós kockázat, none.
+# Közeli zóna ATR-számítás (D1 ATR14): USDCHF ár 0.83888 (ask 0.83900), ATR 0.00633; zóna 1 felső széle 0.83690 = 0.00198 távolság = 0.31 ATR, alsó széle 0.83560 = 0.52 ATR; zóna 2 felső széle 0.83520 = 0.58 ATR; zóna 3 0.83350 = 0.85 ATR, alsó 0.83250 = 1.01 ATR. Szint-források: 11.12 zárás 0.83529, 11.13 mélypont 0.83449, H4 SMA20 0.83401, 11.11 zárás 0.83303.
+# Többi pár (ár / ATR): EURUSD 1.10267 / 0.00741, GBPUSD 1.32192 / 0.00771, USDJPY 159.406 / 0.886, USDCAD 1.42756 / 0.00684, AUDUSD 0.67614 / 0.00573, NZDUSD 0.55223 / 0.00548: mind none, ezért közeli zóna nem kell.
+# Hírek (UTC): 13:30 Kanada CPI (nagy, CAD; előző 3,1%; idő megerősítve) és Empire State index (USD, közepes); 14:05 Fed Williams beszéd (közepes); 17:00 Fed elnök Warsh beszéd (nagy, a NY ülés végén). A Williams- és Warsh-időpont egyetlen naptárból származik, nem ellenőrzött másodszor. London alatt nincs nagy esemény.
 # Kedd 11.17: USA kiskereskedelem, ipari termelés; szerda 11.18 14:00 FOMC jegyzőkönyv (nem mai terv).
 
-GENERATED;2026.11.16 06:00
+GENERATED;2026.11.16 10:00
 VALID_UNTIL;2026.11.16 17:15
 ENABLED;1
 
