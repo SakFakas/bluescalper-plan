@@ -1,4 +1,5 @@
 # BlueScalper plan - minden idő UTC, formátum: ÉÉÉÉ.HH.NN ÓÓ:PP
+# FRISSÍTÉS 09:59 UTC: az adat ELAVULT, a legfrissebb META utc=2026.11.17 07:25, ez 154 perc (>2,5 óra) régi: az EA nem exportált azóta (gép aludt/EA nem futott). Védelem: ENABLED;0, a terv nem kereskedik, amíg friss adat nem jön. A lent maradó BIAS/ZONE/BLACKOUT sorok a 06:00-s terv szintjei, csak tájékoztató jellegűek (USDCHF 07:25: bid 0.83921, ask 0.83934).
 # Terv a 2026-11-17 (kedd) ülésekre, téli idő: LONDON 08:00-12:00 UTC (09-13 magyar idő) és NEW YORK 13:00-17:00 UTC (14-18 magyar idő). Ez a 06:00 körüli (06:00 UTC) napi terv, teljes fájl, elsősorban a London ülésre, de mindkét ülésre érvényes zónákkal.
 # Adat: data/*.csv META utc=2026.11.17 05:02, vagyis ~1 óra, friss. server_minus_utc_sec=7199-7200 (téli UTC+2, rendben).
 # Háttér: erős dollár-trend marad (D1/H4): EURUSD, GBPUSD, AUDUSD, NZDUSD lefelé (H4 SMA20<SMA50), USDCHF és USDCAD felfelé; a hétfői (11.16) zárás új 10-20 napos csúcsot hozott USDCHF-en (0.84078) és USDCAD-en (1.43109). MaxSameUsdDirection=1: csak EGY dollár-long setup kap irányt (az EUR/GBP/AUD/NZD short is dollár-long), ezért a többi none.
@@ -7,9 +8,9 @@
 # Többi pár (ár / ATR): EURUSD 1.10051 / 0.00730, GBPUSD 1.31936 / 0.00771, USDJPY 159.150 / 0.885, USDCAD 1.43007 / 0.00685, AUDUSD 0.67396 / 0.00586, NZDUSD 0.54941 / 0.00546: mind none, ezért közeli zóna nem kell.
 # Hírek (UTC): 07:00 UK munkaerőpiac (GBP, nagy) a London nyitás előtt, az ülésre nem hat blackoutot; 13:30 USA októberi kiskereskedelem (USD, nagy); ~14:15 USA ipari termelés (USD, közepes, idő nem ellenőrzött). Fed-beszédet keddre nem találtam. London alatt nincs nagy esemény. Szerda 11.18: UK CPI (várt 3,6%), 14:00 FOMC jegyzőkönyv (nem mai terv).
 
-GENERATED;2026.11.17 06:00
+GENERATED;2026.11.17 09:59
 VALID_UNTIL;2026.11.17 17:15
-ENABLED;1
+ENABLED;0
 
 BLACKOUT;2026.11.17 13:20;2026.11.17 13:45;USD
 BLACKOUT;2026.11.17 14:10;2026.11.17 14:25;USD
