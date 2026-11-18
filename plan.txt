@@ -1,9 +1,9 @@
 # BlueScalper plan - óránkénti szűrő. Minden idő UTC.
-# Adat friss: META utc=2026.11.18 06:45 (kb. 8 perc). setups.csv: 0 sor, nincs WAIT, nincs CLOSED -> nincs mit elvetni, nincs mit tanulni.
-# Hír (06:55-09:55): UK CPI (okt) 07:00 UTC körül -> BLACKOUT GBP. Lagarde (ECB), Gravelle (BoC), Pill (BoE) beszédek pontos idő nélkül, nincs blackout. US építési engedélyek 13:30, FOMC jegyzőkönyv 19:00, ablakon kívül.
+# Adat friss: META utc=2026.11.18 07:45 (kb. 8 perc). setups.csv: 0 sor, nincs WAIT, nincs CLOSED -> nincs mit elvetni, nincs mit tanulni.
+# Hír (07:55-10:55): UK CPI 07:00 már lefutott. Nagy hatású esemény nincs az ablakban -> nincs blackout. US építési engedélyek 13:30, FOMC jegyzőkönyv 19:00, ablakon kívül.
 # ALLOW: mindenhol both, nincs egyértelmű H4/D1 ok irányt tiltani.
-GENERATED;2026.11.18 06:55
-VALID_UNTIL;2026.11.18 08:15
+GENERATED;2026.11.18 07:53
+VALID_UNTIL;2026.11.18 09:13
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
@@ -12,4 +12,3 @@ ALLOW;USDCHF;both
 ALLOW;USDCAD;both
 ALLOW;AUDUSD;both
 ALLOW;NZDUSD;both
-BLACKOUT;2026.11.18 07:00;2026.11.18 07:00;GBP
