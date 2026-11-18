@@ -1,10 +1,9 @@
 # BlueScalper plan - óránkénti szűrő. Minden idő UTC.
-# Adat: META utc=2026.11.18 08:45 (kb. 127 perc, 2,5 óra alatt -> még elfogadható; a 09:45-ös export még nem érkezett meg). setups.csv: 0 sor, nincs WAIT, nincs CLOSED -> nincs mit elvetni, nincs mit tanulni.
-# Hír (10:55-13:55): nagy hatású esemény nem található (EUR végső CPI ~10:00 már lefutott; US építési engedélyek/kezdések 13:30 közepes) -> nincs blackout. FOMC jegyzőkönyv 19:00, ablakon kívül.
-# ALLOW: mindenhol both, nincs egyértelmű H4/D1 ok irányt tiltani.
-GENERATED;2026.11.18 10:55
-VALID_UNTIL;2026.11.18 12:15
-ENABLED;1
+# ADAT ELAVULT: META utc=2026.11.18 08:45, most 11:53 -> kb. 188 perc (>2,5 óra). Az EA nem fut / a gép alszik -> ENABLED;0.
+# setups.csv: 0 sor, nincs WAIT, nincs CLOSED -> nincs mit elvetni, nincs mit tanulni. Hírellenőrzés kihagyva (az EA nem kereskedik).
+GENERATED;2026.11.18 11:53
+VALID_UNTIL;2026.11.18 13:13
+ENABLED;0
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
 ALLOW;USDJPY;both
