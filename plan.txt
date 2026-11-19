@@ -1,8 +1,8 @@
 # BlueScalper plan - óránkénti szűrő. Minden idő UTC.
-# ADAT ELAVULT: minden pár META utc=2026.11.18 08:45, most 2026.11.19 15:53 UTC -> kb. 31 óra (>2,5 óra). Az EA nem exportál / a gép alszik -> ENABLED;0.
+# ADAT ELAVULT: minden pár META utc=2026.11.18 08:45, most 2026.11.19 16:52 UTC -> kb. 32 óra (>2,5 óra). Az EA nem exportál / a gép alszik -> ENABLED;0.
 # setups.csv: csak fejléc, nincs WAIT, nincs CLOSED -> nincs mit elvetni, nincs mit tanulni. Hírellenőrzés kihagyva (az EA nem kereskedik).
-GENERATED;2026.11.19 15:53
-VALID_UNTIL;2026.11.19 17:13
+GENERATED;2026.11.19 16:52
+VALID_UNTIL;2026.11.19 18:12
 ENABLED;0
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
