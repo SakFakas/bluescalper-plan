@@ -1,13 +1,13 @@
 # BlueScalper plan - oránkénti szűrő. Minden idő UTC.
-# Adat friss (META utc=2026.11.23 10:45). 3 WAIT setup, mindhárom engedve (nincs REJECT).
-# USDJPY-202611230815 (long): D1/H4 oldalazó 158.4-160.2 sáv, 2R előtt nincs erős szint, spread 21 pont normális.
-# GBPUSD-202611231000 (short): D1 lejtő (1.32 -> 1.308), a short a trenddel megy; 2R előtt közeli erős szint nincs; spread 13 normális.
-# AUDUSD-202611231000 (short): D1 erős lejtő (0.677 -> 0.662), a short a trenddel megy; nincs közeli ellentétes szint; spread 14 normális.
-# Hír: a keresés nem adott megbízható naptárat a következő 3 órára; nagy hatású esemény nem azonosítható -> nincs BLACKOUT.
+# Adat friss (META utc=2026.11.23 11:45, ~15 perc). 3 WAIT setup, mindhárom engedve (nincs REJECT).
+# USDJPY-202611230815 (long): D1 oldalazó 158.4-160.0 sáv, 2R előtt nincs erős közeli szint, spread 20 pont normális.
+# GBPUSD-202611231000 (short): D1 lejtő (1.320 -> 1.308), short a trenddel megy; spread normális.
+# AUDUSD-202611231000 (short): D1 erős lejtő (0.673 -> 0.662), short a trenddel megy; spread normális.
+# Hír: a keresés nem adott megbízható naptárat; US/EU flash PMI (kb. 14:45 UTC) közepes hatású -> nincs BLACKOUT.
 # CLOSED setup nincs, mit tanulni nincs.
 # ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra.
-GENERATED;2026.11.23 10:53
-VALID_UNTIL;2026.11.23 12:13
+GENERATED;2026.11.23 11:53
+VALID_UNTIL;2026.11.23 13:13
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
