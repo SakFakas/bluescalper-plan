@@ -1,9 +1,10 @@
 # BlueScalper plan - oránkénti szűrő. Minden idő UTC.
-# Adat friss (META utc=2026.11.23 07:45, 7 pár). setups.csv: csak fejléc -> nincs WAIT, nincs CLOSED, nincs mit elvetni/tanulni.
-# Hír: naptár keresés nem adott megbízható adatot a következő 3 órára; nagy hatású esemény nem azonosítható -> nincs BLACKOUT. (Esetleges flash PMI-k közepes hatásúak, nem tiltunk.)
-# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra; spreadek normálisak (13-20 pont).
-GENERATED;2026.11.23 07:55
-VALID_UNTIL;2026.11.23 09:15
+# Adat friss (META utc=2026.11.23 08:45). 1 WAIT setup: USDJPY-202611230815 (long) -> engedve: nincs konkrét elutasítási ok (nincs előtte erős ellentétes szint a 2R-ig, előző napi csúcs 159.84 messze; spread 21 pont, Tokió ünnep miatt kissé vékony, de nem rendellenes).
+# Hír: a keresés nem adott megbízható naptárat; ismert: flash PMI-k (EUR ~09:00, GBP ~09:30, USA ~14:45) közepes hatásúak, nem tiltunk. Nagy hatású esemény nem azonosítható -> nincs BLACKOUT.
+# CLOSED setup nincs, mit tanulni nincs.
+# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra.
+GENERATED;2026.11.23 08:52
+VALID_UNTIL;2026.11.23 10:12
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
