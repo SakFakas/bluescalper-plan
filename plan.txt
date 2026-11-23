@@ -1,9 +1,9 @@
 # BlueScalper plan - oránkénti szűrő. Minden idő UTC.
-# Adat friss (META utc=2026.11.23 06:45, 7 pár). setups.csv: csak fejléc -> nincs WAIT, nincs CLOSED, nincs mit elvetni/tanulni.
-# Hír: a napi naptár (nov 23) nem volt megbízhatóan elérhető; nagy hatású esemény nem azonosítható a következő 3 órára -> nincs BLACKOUT. (Esetleges flash PMI-k közepes hatásúak, nem tiltunk.)
-# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra; spreadek normálisak (12-21 pont).
-GENERATED;2026.11.23 06:53
-VALID_UNTIL;2026.11.23 08:13
+# Adat friss (META utc=2026.11.23 07:45, 7 pár). setups.csv: csak fejléc -> nincs WAIT, nincs CLOSED, nincs mit elvetni/tanulni.
+# Hír: naptár keresés nem adott megbízható adatot a következő 3 órára; nagy hatású esemény nem azonosítható -> nincs BLACKOUT. (Esetleges flash PMI-k közepes hatásúak, nem tiltunk.)
+# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra; spreadek normálisak (13-20 pont).
+GENERATED;2026.11.23 07:55
+VALID_UNTIL;2026.11.23 09:15
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
