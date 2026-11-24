@@ -1,10 +1,10 @@
 # BlueScalper plan - oránkénti szűrő. Minden idő UTC.
-# Adat friss (META utc=2026.11.24 09:45, ~10 perc). Push jog rendben. 0 WAIT setup -> nincs REJECT.
+# Adat friss (META utc=2026.11.24 10:45, ~8 perc). Push jog rendben. 0 WAIT setup -> nincs REJECT.
 # Hír: a keresés nem adott megbízható naptárat; a következő ~3 órára nincs ismert nagy hatású esemény -> nincs BLACKOUT.
-# Tanulság: CLOSED setup nincs (USDJPY, AUDUSD CANCELLED, GBPUSD EXPIRED no_retest), nincs mit tanulni.
+# Tanulság: új CLOSED setup nincs (USDJPY, AUDUSD CANCELLED, GBPUSD EXPIRED no_retest), nincs mit tanulni.
 # ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra.
-GENERATED;2026.11.24 09:52
-VALID_UNTIL;2026.11.24 11:12
+GENERATED;2026.11.24 10:54
+VALID_UNTIL;2026.11.24 12:14
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
