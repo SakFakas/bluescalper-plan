@@ -1,11 +1,11 @@
 # BlueScalper plan - óránkénti szűrő. Minden idő UTC.
-# Adat: META utc=2026.11.25 14:45 (~70 perc, <2,5 óra -> ENABLED). Megj.: a 15:45-ös "data" commit üres volt (nem változott fájl), az EA export lehet, hogy nem frissített - ha a következő órában is 14:45 marad, figyelni kell.
-# WAIT setup: 0, LIVE/SHADOW: 0 -> nincs REJECT.
-# Hír (16:00-19:00 UTC): a naptárkeresés nem adott konkrét nagy hatású eseményt; a mai US adatok (13:30, 15:00, EIA 15:30) már lementek. Nincs BLACKOUT. Holnap US ünnep (Thanksgiving), estére vékonyodó piac - nem ok tiltásra.
-# Tanulság: GBPUSD-202611251230 (elutasítva: US adat + H4 ellentrend) SHADOW -1R -> szűrő +1R. Egy minta, szabályok változatlanok.
-# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra; spreadek normálisak (12-20 pt).
-GENERATED;2026.11.25 15:55
-VALID_UNTIL;2026.11.25 17:15
+# Adat: META utc=2026.11.25 16:45 (friss, ~10 perc) -> ENABLED.
+# WAIT: GBPUSD-202611251645 long (zóna 1.30657-1.30691, extrém 1.30543) -> ENGEDVE. A 1.3046-1.3054 napi mélypont-zóna söprése valódi szint; az ár már a zóna fölött (1.3087), áttörte a mai 1.3080-as plafont. H4 ma esik, de D1 tegnap erősen bika - ez nem egyértelmű ellentrend, a 2R cél (~1.3096) előtt nincs erős H4/D1 szint (a tegnapi 1.3122-es csúcs fölötte van). Az órán belül nincs hír.
+# Hír (17:00-20:00 UTC): nincs nagy hatású esemény (US adatok 13:30-15:30 lementek, FOMC jegyzőkönyv nov. 18-án volt). Nincs BLACKOUT. Holnap US Thanksgiving, este vékonyodó likviditás - nem ok tiltásra.
+# Tanulság: a GBPUSD-202611251230 elutasítás (US adat + H4 ellentrend) -1R-t hozott SHADOW-ban -> szűrő +1R. Egy minta, szabályok változatlanok.
+# ALLOW: minden pár both; spreadek normálisak (11-20 pt), nincs egyértelmű H4/D1 ok iránytiltásra.
+GENERATED;2026.11.25 16:57
+VALID_UNTIL;2026.11.25 18:17
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
