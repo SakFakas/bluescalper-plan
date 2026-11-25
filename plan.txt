@@ -1,12 +1,12 @@
 # BlueScalper plan - oránkénti szűrő. Minden idő UTC.
-# Adat friss (META utc=2026.11.25 12:45, ~8 perc). Push jog rendben. 2 WAIT setup.
-# USDCHF-202611250715 short: ENGEDVE (következetesen). H4/D1 esés irányában; ár 0.8291, zóna (0.83648-56) ~74 pippel feljebb, visszateszt valószínűtlen.
-# GBPUSD-202611251230 long: ELVETVE. Ár (1.3074) közvetlenül a zóna (1.30626-718) felett, a visszateszt/entry 13:00-13:30 körül várható, így a trade első 1-2 órájába esik a 13:30-as US adatcsomag (PCE, tartós cikkek, munkanélküli-segély). Ráadásul H4 tegnap óta lefelé (1.3124 -> 1.3056).
-# Hír: US adatcsomag 13:30 UTC -> BLACKOUT USD 13:30-13:45 (+EA ±10 perc). Holnap US ünnep (Thanksgiving), délutántól vékonyodó piac.
-# Tanulság: CLOSED setup továbbra sincs (2 CANCELLED, 1 EXPIRED), nincs miből tanulni.
-# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra. Spreadek normálisak (12-22 pt).
-GENERATED;2026.11.25 12:53
-VALID_UNTIL;2026.11.25 14:13
+# Adat friss (META utc=2026.11.25 13:45, ~9 perc). Push jog rendben. WAIT setup: 0.
+# GBPUSD-202611251230 long: már SHADOW (előző órai elutasítás érvényes, a REJECT sor marad a következetesség miatt).
+# USDCHF-202611250715 short: EXPIRED (no_retest) - a zóna messze volt, ahogy várható volt.
+# Hír (köv. ~3 óra, a naptár nem volt egyértelműen ellenőrizhető, szokásos menetrend): 15:00 US új lakáseladások / UMich végleges (közepes) -> rövid USD blackout; 15:30 EIA nyersolaj-készlet -> CAD blackout. Holnap US ünnep (Thanksgiving), délután vékonyodó piac - most még nem ok iránytiltásra.
+# Tanulság: CLOSED setup még mindig nincs (2 CANCELLED, 2 EXPIRED no_retest, 1 SHADOW fut) - nincs miből tanulni, szabályok változatlanok.
+# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra. Spreadek normálisak (12-21 pt).
+GENERATED;2026.11.25 13:55
+VALID_UNTIL;2026.11.25 15:15
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
@@ -16,4 +16,5 @@ ALLOW;USDCAD;both
 ALLOW;AUDUSD;both
 ALLOW;NZDUSD;both
 REJECT;GBPUSD-202611251230;US adat 13:30 (PCE/tartós cikkek) a trade első órájában + H4 ellentrend
-BLACKOUT;2026.11.25 13:30;2026.11.25 13:45;USD
+BLACKOUT;2026.11.25 15:00;2026.11.25 15:05;USD
+BLACKOUT;2026.11.25 15:30;2026.11.25 15:35;CAD
