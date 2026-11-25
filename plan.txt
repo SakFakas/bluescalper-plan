@@ -1,11 +1,11 @@
 # BlueScalper plan - oránkénti szűrő. Minden idő UTC.
-# Adat friss (META utc=2026.11.25 07:45, ~9 perc). Push jog rendben. 1 WAIT setup.
-# USDCHF-202611250715 short: ENGEDVE. Ázsiai H1 csúcs (0.83667) söprése 0.83710-ig, majd CHoCH le; H4/D1 tegnapi erős esés (0.8429->0.8344) irányába megy, a 2R cél (~0.8353) a 0.8347-0.8350 mélypontok fölött van, spread normál (12 pt).
-# Hír: a keresés nem adott megbízható naptárat 08:00-11:00 UTC-re; ismert nagy hatású esemény nincs az ablakban (US adatok hálaadás előtt 13:30 körül, kívül esik) -> nincs BLACKOUT.
+# Adat friss (META utc=2026.11.25 08:45, ~10 perc). Push jog rendben. 1 WAIT setup.
+# USDCHF-202611250715 short: ENGEDVE (következetesen az előző órával). Ázsiai H1 csúcs söprése 0.83710-ig, CHoCH le; H4/D1 esés irányába megy. Ár azóta 0.8345-ig lement visszateszt nélkül, setup érvényes; 2R cél a 0.8344-0.8347 mélypontok közelében, de nem mögöttük. Spread normál (15 pt).
+# Hír: a keresés nem adott megbízható naptárat 09:00-12:00 UTC-re; ismert nagy hatású esemény nincs az ablakban (US adatok hálaadás előtt 13:30 körül, kívül esik) -> nincs BLACKOUT.
 # Tanulság: továbbra sincs CLOSED setup, nincs miből tanulni.
-# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra.
-GENERATED;2026.11.25 07:55
-VALID_UNTIL;2026.11.25 09:15
+# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra. Spreadek normálisak (12-21 pt).
+GENERATED;2026.11.25 08:55
+VALID_UNTIL;2026.11.25 10:15
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
