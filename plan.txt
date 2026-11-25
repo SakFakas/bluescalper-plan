@@ -1,10 +1,11 @@
-# BlueScalper plan - oránkénti szűrő. Minden idő UTC.
-# Adat friss (META utc=2026.11.25 14:45, ~9 perc). Push jog rendben. WAIT setup: 0, LIVE/SHADOW: 0.
-# Hír (köv. ~3 óra; a naptár keresés nem adott egyértelmű listát, szokásos menetrend): 15:00 US új lakáseladások / UMich végleges (közepes) -> rövid USD blackout; 15:30 EIA nyersolaj-készlet -> CAD blackout. Holnap US ünnep (Thanksgiving), késő délután vékonyodó piac.
-# Tanulság: GBPUSD-202611251230 (elutasítva: 13:30 US adat + H4 ellentrend) SHADOW-ban -1R-rel zárt -> az elutasítás helyes volt (+1R a szűrőnek). Egy minta, szabályok változatlanok.
-# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra. Spreadek normálisak (12-20 pt).
-GENERATED;2026.11.25 14:55
-VALID_UNTIL;2026.11.25 16:15
+# BlueScalper plan - óránkénti szűrő. Minden idő UTC.
+# Adat: META utc=2026.11.25 14:45 (~70 perc, <2,5 óra -> ENABLED). Megj.: a 15:45-ös "data" commit üres volt (nem változott fájl), az EA export lehet, hogy nem frissített - ha a következő órában is 14:45 marad, figyelni kell.
+# WAIT setup: 0, LIVE/SHADOW: 0 -> nincs REJECT.
+# Hír (16:00-19:00 UTC): a naptárkeresés nem adott konkrét nagy hatású eseményt; a mai US adatok (13:30, 15:00, EIA 15:30) már lementek. Nincs BLACKOUT. Holnap US ünnep (Thanksgiving), estére vékonyodó piac - nem ok tiltásra.
+# Tanulság: GBPUSD-202611251230 (elutasítva: US adat + H4 ellentrend) SHADOW -1R -> szűrő +1R. Egy minta, szabályok változatlanok.
+# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra; spreadek normálisak (12-20 pt).
+GENERATED;2026.11.25 15:55
+VALID_UNTIL;2026.11.25 17:15
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
@@ -13,5 +14,3 @@ ALLOW;USDCHF;both
 ALLOW;USDCAD;both
 ALLOW;AUDUSD;both
 ALLOW;NZDUSD;both
-BLACKOUT;2026.11.25 15:00;2026.11.25 15:05;USD
-BLACKOUT;2026.11.25 15:30;2026.11.25 15:35;CAD
