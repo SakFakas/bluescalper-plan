@@ -1,11 +1,12 @@
 # BlueScalper plan - oránkénti szűrő. Minden idő UTC.
-# Adat friss (META utc=2026.11.25 11:45, ~10 perc). Push jog rendben. 1 WAIT setup.
-# USDCHF-202611250715 short: ENGEDVE (következetesen). H4/D1 esés irányában; ár 0.8322-ig esett, a zóna (0.83648-56) ~43 pippel feljebb, visszateszt valószínűtlen, de ha jön, érvényes. Spread normál (14 pt).
-# Hír: US adatcsomag 13:30 UTC (PCE/személyes jövedelem, tartós cikkek, heti munkanélküli-segély; hálaadás előtti szerda) -> BLACKOUT USD 13:30-13:45 (+EA ±10 perc). Holnap US ünnep, délutántól vékonyodó piac.
+# Adat friss (META utc=2026.11.25 12:45, ~8 perc). Push jog rendben. 2 WAIT setup.
+# USDCHF-202611250715 short: ENGEDVE (következetesen). H4/D1 esés irányában; ár 0.8291, zóna (0.83648-56) ~74 pippel feljebb, visszateszt valószínűtlen.
+# GBPUSD-202611251230 long: ELVETVE. Ár (1.3074) közvetlenül a zóna (1.30626-718) felett, a visszateszt/entry 13:00-13:30 körül várható, így a trade első 1-2 órájába esik a 13:30-as US adatcsomag (PCE, tartós cikkek, munkanélküli-segély). Ráadásul H4 tegnap óta lefelé (1.3124 -> 1.3056).
+# Hír: US adatcsomag 13:30 UTC -> BLACKOUT USD 13:30-13:45 (+EA ±10 perc). Holnap US ünnep (Thanksgiving), délutántól vékonyodó piac.
 # Tanulság: CLOSED setup továbbra sincs (2 CANCELLED, 1 EXPIRED), nincs miből tanulni.
-# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra. Spreadek normálisak (12-21 pt).
-GENERATED;2026.11.25 11:55
-VALID_UNTIL;2026.11.25 13:15
+# ALLOW: minden pár both, nincs egyértelmű H4/D1 ok iránytiltásra. Spreadek normálisak (12-22 pt).
+GENERATED;2026.11.25 12:53
+VALID_UNTIL;2026.11.25 14:13
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
@@ -14,4 +15,5 @@ ALLOW;USDCHF;both
 ALLOW;USDCAD;both
 ALLOW;AUDUSD;both
 ALLOW;NZDUSD;both
+REJECT;GBPUSD-202611251230;US adat 13:30 (PCE/tartós cikkek) a trade első órájában + H4 ellentrend
 BLACKOUT;2026.11.25 13:30;2026.11.25 13:45;USD
