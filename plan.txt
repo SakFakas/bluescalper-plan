@@ -1,11 +1,11 @@
 # BlueScalper plan - óránkénti szűrő. Minden idő UTC.
-# Adat: META utc=2026.11.25 16:45 (friss, ~10 perc) -> ENABLED.
-# WAIT: GBPUSD-202611251645 long (zóna 1.30657-1.30691, extrém 1.30543) -> ENGEDVE. A 1.3046-1.3054 napi mélypont-zóna söprése valódi szint; az ár már a zóna fölött (1.3087), áttörte a mai 1.3080-as plafont. H4 ma esik, de D1 tegnap erősen bika - ez nem egyértelmű ellentrend, a 2R cél (~1.3096) előtt nincs erős H4/D1 szint (a tegnapi 1.3122-es csúcs fölötte van). Az órán belül nincs hír.
-# Hír (17:00-20:00 UTC): nincs nagy hatású esemény (US adatok 13:30-15:30 lementek, FOMC jegyzőkönyv nov. 18-án volt). Nincs BLACKOUT. Holnap US Thanksgiving, este vékonyodó likviditás - nem ok tiltásra.
-# Tanulság: a GBPUSD-202611251230 elutasítás (US adat + H4 ellentrend) -1R-t hozott SHADOW-ban -> szűrő +1R. Egy minta, szabályok változatlanok.
-# ALLOW: minden pár both; spreadek normálisak (11-20 pt), nincs egyértelmű H4/D1 ok iránytiltásra.
-GENERATED;2026.11.25 16:57
-VALID_UNTIL;2026.11.25 18:17
+# Adat: META utc=2026.11.26 06:45 (friss, ~10 perc) -> ENABLED.
+# WAIT: AUDUSD-202611260615 short (zóna 0.66402-0.66430, extrém 0.66489) -> ELUTASÍTVA. A söprés csak a kis ázsiai H1 csúcs (0.66465) fölött történt, miközben H4 tegnap 0.6559-től erős emelkedő trendben van (magasabb mélypontok) a short ellen; a 2R cél (~0.6620) előtt közvetlenül ott a mai napi mélypont 0.6622 és a tegnapi záró-konszolidáció 0.6627-0.6628.
+# Hír (07:00-10:00 UTC): nincs nagy hatású esemény a 7 pár devizáira (ma US Thanksgiving, US piacok zárva; ECB jegyzőkönyv csak 12:30 körül). Nincs BLACKOUT. Délutántól vékony likviditás várható - most még nem ok tiltásra.
+# Tanulság: tegnap GBPUSD-202611251230 elutasítás SHADOW-ban -1R (szűrő +1R), GBPUSD-202611251645 engedve, de no_retest -> EXPIRED. Kevés minta, szabályok változatlanok.
+# ALLOW: minden pár both; spreadek normálisak (13-21 pt), nincs egyértelmű H4/D1 ok iránytiltásra.
+GENERATED;2026.11.26 06:55
+VALID_UNTIL;2026.11.26 08:15
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
@@ -14,3 +14,4 @@ ALLOW;USDCHF;both
 ALLOW;USDCAD;both
 ALLOW;AUDUSD;both
 ALLOW;NZDUSD;both
+REJECT;AUDUSD-202611260615;minor H1 sweep vs H4 uptrend + napi mélypont 0.6622 a 2R cél előtt
