@@ -1,12 +1,12 @@
 # BlueScalper plan - óránkénti szűrő. Minden idő UTC.
-# Adat: META utc=2026.11.26 07:45 (friss, ~10 perc) -> ENABLED.
-# WAIT: AUDUSD-202611260615 short -> továbbra is ELUTASÍTVA (változatlan ok: kis ázsiai H1 csúcs söprése H4 emelkedő trend ellen, napi mélypont 0.6622 a 2R cél előtt).
-# WAIT: USDCAD-202611260715 short (zóna 1.42232-1.42255, extrém 1.42278) -> ENGEDVE. D1/H4 erős csökkenő trend (1.4384 -> 1.4190) a setup irányába; a söprés az ázsiai csúcsok (1.4224/1.4226) fölött; 2R cél (~1.4212) előtt nincs erős ellentétes szint (ázsiai mélypontok 1.4209 alatta). Spread 18 pt normális.
-# Hír (08:00-11:00 UTC): nincs nagy hatású esemény a 7 pár devizáira (US Thanksgiving, US piacok zárva; ECB jegyzőkönyv ~12:30). Nincs BLACKOUT. Délután vékony piac várható.
-# Tanulság: GBPUSD-202611251230 (elutasítva, hír) SHADOW -1R -> szűrő +1R; a többi lezárt setup EXPIRED/CANCELLED, trade nélkül. Kevés minta, szabályok változatlanok.
-# ALLOW: minden pár both; spreadek normálisak (11-21 pt), nincs egyértelmű H4/D1 ok iránytiltásra a következő órára.
-GENERATED;2026.11.26 07:55
-VALID_UNTIL;2026.11.26 09:15
+# Adat: META utc=2026.11.26 08:45 (friss, ~9 perc) -> ENABLED.
+# WAIT: AUDUSD-202611260615 short -> továbbra is ELUTASÍTVA (változatlan ok: kis ázsiai H1 csúcs söprése, H4 még emelkedő (magasabb mélypontok 0.6559->0.6630), napi mélypont 0.6622 a 2R cél előtt).
+# LIVE: USDCAD-202611260715 short (előző órában engedve, D1/H4 csökkenő trend irányába) - fut.
+# Hír (09:00-12:00 UTC): nincs nagy hatású esemény a 7 pár devizáira (US Thanksgiving, US piacok zárva; ECB jegyzőkönyv ~12:30, közepes). Nincs BLACKOUT. Délután vékony piac várható.
+# Tanulság: GBPUSD-202611251230 (elutasítva, hír) SHADOW -1R -> szűrő +1R; új lezárt setup nincs. Kevés minta, szabályok változatlanok.
+# ALLOW: minden pár both; spreadek normálisak (13-21 pt), nincs egyértelmű H4/D1 ok iránytiltásra a következő órára.
+GENERATED;2026.11.26 08:54
+VALID_UNTIL;2026.11.26 10:14
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
