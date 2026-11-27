@@ -1,11 +1,11 @@
 # BlueScalper plan - óránkénti szűrő. Minden idő UTC.
-# Adat: META utc=2026.11.27 09:45 (friss, ~10 perc) -> ENABLED. Spreadek normálisak (13-20 pt).
-# WAIT: EURUSD-202611270815 short (zóna 1.09753-1.09767, extrém 1.09822) -> ENGEDVE (következetesen az előző futással). D1/H4 oldalazás 1.0955-1.0990, nincs erős ellentrend. Ár a detektálás óta lefelé ment (1.0956-1.0962), a zónát nem tesztelte vissza; ha visszajön, a 2R cél (~1.0959) az előző napi mélypont (1.09572) fölött van, nem áll előtte erős szint.
-# Hír (10:00-13:00 UTC): nagy hatású esemény nem található a 7 pár devizáira. Kanadai Q3 GDP a naptárak szerint hétfőn (11.30), nem ma. Thanksgiving utáni péntek: rövidített US nap, délután vékonyabb piac várható. Nincs BLACKOUT.
-# Tanulság: nincs új CLOSED. Eddig taken 2 trade, -2R (USDCAD, EURUSD, mindkettő SL); elutasított GBPUSD SHADOW -1R (jó elutasítás). Kevés minta, szabályok változatlanok.
+# Adat: META utc=2026.11.27 10:45 (friss, ~8 perc) -> ENABLED. Spreadek normálisak.
+# WAIT: EURUSD-202611270815 short (zóna 1.09753-1.09767, extrém 1.09822) -> ENGEDVE (következetesen az előző futásokkal). D1/H4 oldalazás 1.0955-1.0990, nincs erős ellentrend; ár 1.0962 körül, a zónát még nem tesztelte vissza; a 2R cél az előző napi mélypont (1.09572) fölött, előtte nincs erős szint.
+# Hír (11:00-14:00 UTC): nagy hatású esemény nem található a 7 pár devizáira. Thanksgiving utáni péntek, rövidített US nap, délután vékonyabb piac várható. Nincs BLACKOUT.
+# Tanulság: nincs új CLOSED. Taken 2 trade, -2R (USDCAD, EURUSD, mindkettő SL); elutasított GBPUSD SHADOW -1R (jó elutasítás). Kevés minta, szabályok változatlanok.
 # ALLOW: minden pár both; nincs egyértelmű H4/D1 ok iránytiltásra a következő órára.
-GENERATED;2026.11.27 09:53
-VALID_UNTIL;2026.11.27 11:13
+GENERATED;2026.11.27 10:54
+VALID_UNTIL;2026.11.27 12:14
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
