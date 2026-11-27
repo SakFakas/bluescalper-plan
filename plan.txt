@@ -1,14 +1,13 @@
 # BlueScalper plan - óránkénti szűrő. Minden idő UTC.
-# Adat: META utc=2026.11.27 15:45 (friss) -> ENABLED. Spreadek normálisak (EURUSD 12, GBPUSD 14, USDJPY 21, USDCAD 19, USDCHF 12 pt).
-# WAIT: 1 db. USDCHF-202611271545 long (zóna 0.83550-0.83599, extrém 0.83470) -> REJECT:
-#   a söprés csak kis intraday szinten (0.83470) történt, a H1 swing low 0.83415 érintetlen; D1 trend lefelé (0.8444 -> 0.8285);
-#   0.83710 (11.25 D1 csúcs = mai csúcs, kétszer elutasítva) erős ellenállás kb. +0.4R-nél a 2R cél előtt;
-#   Thanksgiving utáni péntek délután, vékony piac, a 24h időstop miatt a trade a hétvégén át futna.
-# Hír (16:00-19:00 UTC): rövidített US kereskedés, nagy hatású esemény a 7 pár devizáira nem ismert. Nincs BLACKOUT.
-# Tanulság: nincs új CLOSED. Eddig taken 2 = -2R (USDCAD, EURUSD SL); elutasított GBPUSD SHADOW -1R (jó elutasítás). Szabályok változatlanok.
+# Adat: META utc=2026.11.27 16:45 (friss) -> ENABLED. Spreadek normálisak (EURUSD 12, USDCHF 13 pt).
+# WAIT: 1 db. USDCHF-202611271545 long (zóna 0.83550-0.83599, extrém 0.83470) -> REJECT (következetesen az előző órával):
+#   kis intraday söprés (0.83470), a H1 swing low 0.83415 érintetlen; D1 trend lefelé (0.8444 -> 0.8285);
+#   0.83710 (11.25 D1 csúcs = mai csúcs) erős ellenállás a 2R cél előtt; Black Friday délután, vékony piac, 24h időstop a hétvégén át.
+# Hír (17:00-20:00 UTC): rövidített US kereskedés (Thanksgiving utáni péntek), nagy hatású esemény a 7 pár devizáira nem ismert. Nincs BLACKOUT.
+# Tanulság: nincs új CLOSED. Taken 2 = -2R (USDCAD, EURUSD SL); elutasított GBPUSD SHADOW -1R (jó elutasítás). Szabályok változatlanok.
 # ALLOW: minden pár both; nincs egyértelmű H4/D1 ok iránytiltásra a következő órára.
-GENERATED;2026.11.27 15:53
-VALID_UNTIL;2026.11.27 17:13
+GENERATED;2026.11.27 16:56
+VALID_UNTIL;2026.11.27 18:16
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
