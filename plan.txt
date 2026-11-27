@@ -1,13 +1,13 @@
 # BlueScalper plan - óránkénti szűrő. Minden idő UTC.
-# Adat: META utc=2026.11.27 11:45 (friss) -> ENABLED. Spreadek normálisak (EURUSD 12, USDJPY 20, USDCAD 21 pt).
-# WAIT: EURUSD-202611270815 short -> ENGEDVE (változatlanul: D1/H4 oldalazás, nincs erős szint a 2R előtt).
-# WAIT: USDCHF-202611271130 short (zóna 0.83574-0.83594, extrém 0.83634) -> ENGEDVE: D1 trend lefelé (0.844 -> 0.8285), a short a nagyobb trenddel megy; 2R cél ~0.8346 a 0.8333-35 H1 mélypontok fölött.
-# WAIT: USDJPY-202611271145 short (zóna 159.513-159.525, extrém 159.569) -> ENGEDVE: D1 tartomány 158.4-159.97, nincs erős ellentrend; 2R cél ~159.38 a 159.31-34 H1 támasz fölött.
-# Hír (12:00-15:00 UTC): nagy hatású esemény nincs a 7 pár devizáira (Kanada Q3 GDP hétfőn, 11.30). Thanksgiving utáni péntek, rövidített US nap, délután vékonyabb piac. Nincs BLACKOUT.
+# Adat: META utc=2026.11.27 12:45 (friss) -> ENABLED. Spreadek normálisak (EURUSD 12, USDCHF 13, USDJPY 21 pt).
+# WAIT: EURUSD-202611270815 short -> ENGEDVE (D1/H4 oldalazás, nincs erős szint a 2R előtt; ár 1.0966, zóna alatt).
+# WAIT: USDCHF-202611271130 short -> ENGEDVE: D1 trend lefelé, a short a trenddel megy. Ár (0.8342) már a zóna és a 2R cél alatt, visszateszt kevésbé valószínű.
+# WAIT: USDJPY-202611271145 short -> ENGEDVE: D1 tartomány 158.4-159.97, nincs erős ellentrend; ár 159.44 a zóna alatt.
+# Hír (13:00-16:00 UTC): nagy hatású esemény nincs a 7 pár devizáira (Kanada Q3 GDP hétfőn, 11.30 13:30). Thanksgiving utáni péntek, rövidített US nap, délután vékonyabb piac, de nem rendellenes. Nincs BLACKOUT.
 # Tanulság: nincs új CLOSED. Taken 2 trade -2R (USDCAD, EURUSD SL); elutasított GBPUSD SHADOW -1R (jó elutasítás). Kevés minta, szabályok változatlanok.
 # ALLOW: minden pár both; nincs egyértelmű H4/D1 ok iránytiltásra a következő órára.
-GENERATED;2026.11.27 11:53
-VALID_UNTIL;2026.11.27 13:13
+GENERATED;2026.11.27 12:55
+VALID_UNTIL;2026.11.27 14:15
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
