@@ -1,12 +1,11 @@
 # BlueScalper plan - óránkénti szűrő. Minden idő UTC.
-# Adat: META utc=2026.11.26 16:45 (friss, ~10 perc) -> ENABLED. Spreadek normálisak (12-22 pt).
-# WAIT: NZDUSD-202611261515 short (zóna 0.54805-0.54830, extrém 0.54858) -> ENGEDVE (változatlan döntés): D1 lejtő trend a short irányába; ár most 0.5472, a zóna alatt ~9 pippel, visszateszt még lehetséges; 2R cél előtt csak a mai mélypont ~0.5470. Nincs hír.
-# LIVE: EURUSD-202611261300 long fut (ár ~1.0974, entry 1.09784 alatt kicsit).
-# Hír (17:00-20:00 UTC): nincs nagy hatású esemény a 7 pár devizáira (US Thanksgiving, US piacok zárva). Nincs BLACKOUT. Ünnepi, vékonyabb piac, de a spreadek normálisak.
-# Tanulság: nincs új CLOSED. Eddig: USDCAD-202611260715 (taken) -1R; GBPUSD-202611251230 (elutasítva) SHADOW -1R -> szűrő +1R. Kevés minta, szabályok változatlanok.
+# Adat: META utc=2026.11.27 06:45 (friss, ~10 perc) -> ENABLED. Spreadek normálisak (12-22 pt).
+# WAIT: nincs. A setups.csv most csak fejlécet tartalmaz (a korábbi sorok - NZDUSD-202611261515, EURUSD-202611261300 - eltűntek; valószínűleg EA-újraindítás/fájl-rotáció).
+# Hír (07:00-10:00 UTC): nagy hatású esemény nincs a 7 pár devizáira. Közepes: francia és spanyol flash CPI (~07:45-08:00, EUR) - blackoutot nem indokol. Német flash CPI hétfőn (11.30). Thanksgiving utáni péntek: rövidített US nap, délutántól vékonyabb piac. Nincs BLACKOUT.
+# Tanulság: nincs új CLOSED a fájlban. Eddigi minta: USDCAD-202611260715 (taken) -1R; GBPUSD-202611251230 (elutasítva) SHADOW -1R. Kevés minta, szabályok változatlanok.
 # ALLOW: minden pár both; nincs egyértelmű H4/D1 ok iránytiltásra a következő órára.
-GENERATED;2026.11.26 16:55
-VALID_UNTIL;2026.11.26 18:15
+GENERATED;2026.11.27 06:54
+VALID_UNTIL;2026.11.27 08:14
 ENABLED;1
 ALLOW;EURUSD;both
 ALLOW;GBPUSD;both
